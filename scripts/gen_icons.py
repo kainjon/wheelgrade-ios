@@ -153,12 +153,14 @@ def android_icons():
     for density, size in ANDROID_LAUNCHER.items():
         for name in ("ic_launcher.png", "ic_launcher_round.png"):
             out = os.path.join(res, f"mipmap-{density}", name)
+            os.makedirs(os.path.dirname(out), exist_ok=True)
             icon(size).save(out, "PNG")
             made.append(out)
     # Adaptive-icon foregrounds (mark scaled to the safe zone, as maskable).
     for density, size in ANDROID_FOREGROUND.items():
         out = os.path.join(res, f"mipmap-{density}",
                            "ic_launcher_foreground.png")
+        os.makedirs(os.path.dirname(out), exist_ok=True)
         maskable(size).save(out, "PNG")
         made.append(out)
     # Splash screens (black field, centred mark, no underline).
