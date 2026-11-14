@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WheelGrade</title>
+<meta name="description" content="WheelGrade — grade any wheel trade before you make it, then track every dollar of premium you collect.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e7a52'/%3E%3Cpath d='M18 20 L26 44 L32 28 L38 44 L46 20' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('wheelgrade-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}</script>
+<link rel="manifest" href="/app/manifest.json">
+<meta name="theme-color" content="#0e7a52">
+<link rel="apple-touch-icon" href="/app/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="WheelGrade">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="site-top">
+      <h1><a class="brand" href="https://wheelgrade.com" aria-label="WheelGrade home"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Wheel<span class="g">Grade</span></a></h1>
+      <div class="header-right">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Dark</span></button>
+        <div id="login-status" class="login-status" aria-live="polite"></div>
+      </div>
+    </div>
+    <nav class="app-nav" aria-label="WheelGrade sections">
+      <a href="#analyzer" data-nav="analyzer">Analyzer</a>
+      <a href="#board" data-nav="board">Board</a>
+      <a href="#portfolio" data-nav="portfolio">Portfolio</a>
+      <a href="#elite" data-nav="elite">Elite 32</a>
+      <a href="https://wheelgrade.com/#pricing">Pricing</a>
+      <a href="https://wheelgrade.com/support.html" target="_blank" rel="noopener">Support</a>
+    </nav>
+    <p class="tagline">Grade any wheel trade before you make it — then track every dollar of premium you collect.</p>
+    <button class="elite-btn" id="elite-btn" type="button">
+      <span class="title">The Elite 32 ›</span>
+      <span class="sub">The only names vetted A+ for the wheel — see why each one earned its seat.</span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+<div id="update-banner" class="update-banner hidden" role="status">
+  <span>A new version of WheelGrade is available.</span>
+  <button class="btn btn-green btn-sm" id="update-reload-btn" type="button">Reload to update</button>
+</div>
+<div id="view-main">
+  <nav class="tabs" role="tablist" aria-label="WheelGrade sections">
+    <button class="tab-btn" data-tab="analyzer" role="tab" aria-selected="true" type="button">Analyzer</button>
+    <button class="tab-btn" data-tab="board" role="tab" aria-selected="false" type="button">Board</button>
+    <button class="tab-btn" data-tab="portfolio" role="tab" aria-selected="false" type="button">Portfolio<span id="portfolio-tab-premium"></span></button>
+  </nav>
+
+  <!-- ============ ANALYZER ============ -->
+  <section class="screen active tab-content" id="screen-analyzer" aria-label="Analyzer">
+    <div id="analyzer-banners" class="hidden"></div>
+
+
+    <p class="intro" id="analyzer-intro" style="font-size:16px;color:var(--dim)">Grade a trade before you make it — quality, rent, delta, the print gate, basis, and the fill. The brokerages will sell you any option; this tells you if it's a good one.</p>
+
+    <div class="card form-card" id="analyzer-form-card">
+      <form id="analyze-form" novalidate>
+        <div>
+          <div class="pill-row" role="group" aria-label="Strategy">
+            <button class="pill-btn" id="strategy-put" type="button" data-kind="put" aria-pressed="true">Cash-secured put</button>
+            <button class="pill-btn" id="strategy-call" type="button" data-kind="call" aria-pressed="false">Covered call</button>
+          </div>
+        </div>
+        <div class="grid2">
+          <div>
+            <label for="ticker">Ticker</label>
+            <input id="ticker" class="ticker-input tnum" name="ticker" type="text" placeholder="MSFT" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10">
+            <p id="ticker-spot" class="ticker-spot hidden" aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="expiry">Expiration</label>
+            <input id="expiry" class="tnum" name="expiry" type="date">
+          </div>
+        </div>
+        <div>
+          <div class="pill-row" role="group" aria-label="Strike choice">
+            <button class="pill-btn" id="strike-auto" type="button" data-strike-mode="suggested" aria-pressed="true">Suggest ~30Δ strike</button>
+            <button class="pill-btn" id="strike-own" type="button" data-strike-mode="own" aria-pressed="false">I'll pick the strike</button>
+          </div>
+          <div id="own-strike-wrap" class="hidden" style="margin-top:12px">
+            <label for="strike">Strike</label>
+            <input id="strike" class="tnum" name="strike" type="number" step="0.5" min="0" inputmode="decimal" placeholder="105">
+          </div>
+        </div>
+        <div class="grid2">
+          <div>
+            <label for="contracts">Contracts</label>
+            <input id="contracts" class="tnum" name="contracts" type="number" min="1" step="1" value="1" inputmode="numeric">
+          </div>
+          <div>
+            <label for="account">Account — optional</label>
+            <input id="account" name="account" type="text" placeholder="Taxable, Roth…" autocomplete="off" maxlength="60">
+          </div>
+        </div>
+        <div id="call-fields" class="grid2 hidden">
+          <div>
+            <label for="shares-owned">Shares owned</label>
+            <input id="shares-owned" class="tnum" name="sharesOwned" type="number" step="100" min="0" inputmode="numeric" placeholder="100">
+          </div>
+          <div>
+            <label for="avgCost">Your cost per share (AVE) — auto-filled from your lot</label>
+            <input id="avgCost" class="tnum" name="avgCost" type="number" step="0.01" min="0" inputmode="decimal" placeholder="104.68">
+          </div>
+        </div>
+        <p id="shares-note" class="shares-note tnum hidden"></p>
+        <p id="analyze-error" class="error hidden" role="alert"></p>
+        <p><button class="btn btn-green btn-block" type="submit" id="analyze-submit">Grade this trade</button></p>
+        <p id="free-grades-note" class="free-grades-note hidden" aria-live="polite"></p>
+        <p id="analyze-loading" class="muted hidden">Pulling the chain…</p>
+      </form>
+    </div>
+
+    <div id="analyze-result" class="card result-card hidden" aria-live="polite"></div>
+
+    <div class="card buy-card" id="buy-card">
+      <div class="buy-head">
+        <div>
+          <h2>Get WheelGrade</h2>
+          <p class="sub">One-time payment. No subscription.</p>
+        </div>
+        <div class="buy-price">
+          <span class="amount tnum">$9.99</span>
+          <span class="per">one-time</span>
+        </div>
+      </div>
+      <p id="payment-banner-in-card" class="banner hidden" style="margin-top:12px">Welcome back — your payment step is done. Now sign in below to create your account and activate your portfolio.</p>
+      <p style="margin-top:12px"><a class="btn btn-green btn-block" href="https://buy.stripe.com/dRmbJ079c1lC09G4omgnK00" target="_blank" rel="noopener">Buy WheelGrade — $9.99</a></p>
+      <p class="buy-note">Secure checkout on Stripe. After you pay, Stripe sends you back to wheelgrade.com/app — you're signed in automatically, no separate sign-up step.</p>
+      <div class="divider">
+        <p class="step-title">Already paid? Sign in here</p>
+        <p class="step-body">If you already paid — for example on another device — sign in with the same Apple or Google account to open your paid account. New here? Just buy above; your account is created at payment time.</p>
+        <div class="auth-grid">
+          <a class="btn btn-dark" data-auth-provider="apple" href="/app/auth/apple">Sign in with Apple</a>
+          <a class="btn btn-google" data-auth-provider="google" href="/app/auth/google"><span class="g">G</span> Sign in with Google</a>
+        </div>
+        <p class="buy-note">No account is needed to look around — login happens at payment time, not before. Until you sign in, this browser keeps its own separate portfolio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOARD ============ -->
+  <section class="screen tab-content" id="screen-board" aria-label="Elite Board">
+    <div class="board-intro">
+      <p>All 32 Elite names at a glance — the daily worksheet. The action comes off the discount from the 1-year high; tap any name for its lifetime view.</p>
+      <button class="btn btn-outline btn-sm" id="board-refresh-btn" type="button" style="flex-shrink:0">↻ Refresh</button>
+    </div>
+    <div id="board-error" class="error hidden" role="alert" style="margin-top:16px"></div>
+    <div id="board-loading" class="loading-line">Pulling prices and rent for all 32 names — this can take a few seconds…</div>
+    <div id="board-balance" class="card balance-card hidden">
+      <p class="bal-line tnum" id="balance-line1"></p>
+      <p class="bal-line tnum" id="balance-line2"></p>
+      <p class="bal-guide">Every monthly CSP cycle should carry at least a couple of ANCHOR / DIVERSE legs alongside the engines — those lots stay above their cost and writable when tech wrecks. A check, not a quota: premium still picks the trades.</p>
+      <p class="bal-quotes tnum" id="balance-quotes"></p>
+    </div>
+    <div id="board-sections"></div>
+    <p class="board-footer">How to read it: puts — discount ≤8% HOLD · 8–25% SELL PUTS · 25–35% WATCH · over 35% AVOID (no new entries, not off the list). Calls — SELL CALLS at or above your cost with rent ≥1%/mo · LOW PREMIUM below your cost when the call rent still pays · HOLD when rent is under 1%/mo or your cost sits more than 15% above price. EARNINGS flags a verified print inside the next ~35 days — no new writes across a print.</p>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section class="screen" id="screen-portfolio" aria-label="Portfolio">
+    <div id="portfolio-error" class="error hidden" role="alert"></div>
+
+    <section style="padding-top:20px">
+      <div class="summary-head">
+        <div>
+          <p class="summary-label" id="premium-month-label">Premium collected</p>
+          <p class="hero-number tnum" id="premium-month">$0</p>
+        </div>
+        <button class="btn btn-outline btn-sm" id="portfolio-refresh-btn" type="button" style="flex-shrink:0;margin-top:4px">↻ Refresh prices</button>
+      </div>
+      <p class="summary-sub tnum" id="premium-split"></p>
+      <p class="summary-sub tnum">All-time premium collected: <strong id="premium-alltime">$0</strong></p>
+      <div class="stats-row tnum">
+        <span>Realized this month: <strong id="realized-month">$0</strong></span>
+        <span>Open: <strong id="open-count">0</strong></span>
+        <span>Put collateral: <strong id="put-collateral">$0</strong></span>
+      </div>
+      <p class="quotes-line tnum" id="quotes-line">Enter a position and prices will appear here.</p>
+    </section>
+
+    <section class="section hidden" id="attention-section">
+      <h2>Needs attention</h2>
+      <div class="attention-list" id="attention-list"></div>
+    </section>
+
+    <section class="section">
+      <button class="btn btn-green btn-block" id="add-trade-btn" type="button">+ Add a trade</button>
+      <div id="trade-form-wrap" class="card trade-form hidden" style="margin-top:12px">
+        <h2 id="trade-form-title">Add a trade</h2>
+        <form id="trade-form" novalidate>
+          <input type="hidden" id="tf-id">
+          <div class="pill-row" role="group" aria-label="Trade type">
+            <button class="pill-btn" id="trade-type-put" type="button" data-trade-kind="put" aria-pressed="true">Sold a put (CSP)</button>
+            <button class="pill-btn" id="trade-type-call" type="button" data-trade-kind="call" aria-pressed="false">Sold a call (CC)</button>
+            <button class="pill-btn" id="trade-type-spread" type="button" data-trade-kind="spread" aria-pressed="false">Put spread</button>
+          </div>
+          <div class="grid2">
+            <div>
+              <label for="tf-ticker">Ticker</label>
+              <input id="tf-ticker" class="ticker-input tnum" type="text" placeholder="MSFT" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10">
+            </div>
+            <div>
+              <label for="tf-strike">Strike</label>
+              <input id="tf-strike" class="tnum" type="number" step="0.5" min="0" inputmode="decimal" placeholder="105">
+            </div>
+          </div>
+          <div id="tf-long-strike-wrap" class="hidden">
+            <label for="tf-long-strike">Long strike (lower leg of the spread)</label>
+            <input id="tf-long-strike" class="tnum" type="number" step="0.5" min="0" inputmode="decimal" placeholder="100">
+          </div>
+          <div class="grid2">
+            <div>
+              <label for="tf-expiry">Expiry</label>
+              <input id="tf-expiry" class="tnum" type="date">
+            </div>
+            <div>
+              <label for="tf-contracts">Contracts</label>
+              <input id="tf-contracts" class="tnum" type="number" min="1" step="1" value="1" inputmode="numeric">
+            </div>
+          </div>
+          <div class="grid2">
+            <div>
+              <label for="tf-premium">Premium per share</label>
+              <input id="tf-premium" class="tnum" type="number" step="0.01" min="0" inputmode="decimal" placeholder="1.25">
+            </div>
+            <div>
+              <label for="tf-opened">Date sold</label>
+              <input id="tf-opened" class="tnum" type="date">
+            </div>
+          </div>
+          <div id="tf-ave-wrap" class="hidden">
+            <label for="tf-ave">Your share cost (AVE) — auto-filled from your lot</label>
+            <input id="tf-ave" class="tnum" type="number" step="0.01" min="0" inputmode="decimal" placeholder="104.68">
+          </div>
+          <div>
+            <label for="tf-account">Account — optional</label>
+            <input id="tf-account" type="text" placeholder="Taxable, Roth…" autocomplete="off" maxlength="60">
+          </div>
+          <p id="tf-premium-total" class="muted tnum hidden"></p>
+          <p id="trade-error" class="error hidden" role="alert"></p>
+          <div class="form-actions">
+            <button class="btn btn-green" type="submit" id="trade-submit">Add position</button>
+            <button class="btn btn-outline hidden" type="button" id="trade-close-btn">Close</button>
+            <button class="btn btn-outline" type="button" id="trade-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Open positions</h2>
+      <p id="positions-loading" class="loading-line" style="margin-top:12px">Loading your book…</p>
+      <div id="positions-grid" class="pos-grid"></div>
+      <div id="positions-empty" class="empty-state hidden">
+        <p class="empty-title">Your portfolio starts empty</p>
+        <p class="empty-sub">No open positions yet. Grade your first trade — or add one you've already made.</p>
+        <div class="empty-actions">
+          <button class="btn btn-green btn-sm" id="empty-grade-btn" type="button">Grade your first trade</button>
+          <button class="btn btn-outline btn-sm" id="empty-add-btn" type="button">Add a trade you've already made</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="lots-section">
+      <h2>Share lots · Taxable</h2>
+      <div id="lots-grid" class="pos-grid"></div>
+    </section>
+
+    <section class="section" id="lifetime-section">
+      <h2>Lifetime by ticker</h2>
+      <p class="section-sub">Tap a ticker to open it — every trade, assignment, and call-away, and the full P&amp;L.</p>
+      <ul class="list-shell" id="lifetime-list"></ul>
+    </section>
+
+    <section class="section hidden" id="activity-section">
+      <h2>Recent activity</h2>
+      <ul class="list-shell" id="activity-list"></ul>
+    </section>
+
+    <section class="section" id="history-section">
+      <button class="history-toggle" id="history-toggle" type="button" aria-expanded="false">History ▸</button>
+      <div id="history-body" class="hidden">
+        <div class="month-pills tnum" id="history-months"></div>
+        <ul class="list-shell" id="history-closed"></ul>
+      </div>
+    </section>
+  </section>
+</div>
+
+<!-- ============ TICKER LIFETIME VIEW ============ -->
+<section id="view-ticker" class="detail-view hidden" aria-label="Ticker lifetime">
+  <button class="back-btn" id="ticker-back" type="button">‹ Back</button>
+  <div id="ticker-body"></div>
+</section>
+
+<!-- ============ ELITE 32 VIEW ============ -->
+<section id="view-elite" class="detail-view hidden" aria-label="The Elite 32">
+  <button class="back-btn" id="elite-back" type="button">‹ Back</button>
+  <h2>Why These 32 Are the Best of the Best</h2>
+  <p class="intro">These 32 names are the only tickers the analyzer's quality check treats as Elite. They earned the seat by passing a strict quality test first: a durable moat, profitable through cycles, a strong balance sheet and free cash flow, proven at scale, no structural disruption question, not a thesis-breaking cyclical, clean execution and governance. Only after all of that did lot price and rent count.</p>
+  <p class="punch">Quality first, always. Premium never leads.</p>
+  <p class="fine">Anything not on this list is graded on its fundamentals instead — a strong company can still earn an A, a weak one caps at C. Quality first, always. No new problem children, ever.</p>
+  <div id="elite-groups"></div>
+  <p class="elite-close">The list is a quality roster, not a buy list — the analyzer grades each trade on its own merits.</p>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <p class="foot-left">For education only — not financial advice.<span>© 2026 WheelGrade. All rights reserved.</span></p>
+      <div class="footer-links">
+        <a href="https://wheelgrade.com/privacy.html">Privacy Policy</a>
+        <button id="about-toggle" type="button" aria-expanded="false">About</button>
+      </div>
+    </div>
+    <div id="about-panel" class="card about-panel hidden">
+      <h2>About WheelGrade</h2>
+      <p>WheelGrade grades cash-secured puts and covered calls against a fixed set of rules — Elite quality first, rent of at least ~1%/month, a ~30Δ strike, no earnings print inside the expiry, a basis you'd be glad to own, and a spread tight enough to fill — then tracks the premium you actually collect.</p>
+      <p class="fine-print">This app is for educational and informational purposes only. It is not financial advice and is not a recommendation to buy or sell any security. Options involve substantial risk of loss, including loss of the entire premium paid. Consult a licensed financial advisor before making investment decisions.</p>
+      <p class="fine-print">Built by Jon Kain</p>
+      <p class="fine-print"><a href="https://wheelgrade.com/privacy.html">Privacy Policy</a></p>
+      <p class="fine-print">On the web: <a href="https://wheelgrade.com/app">wheelgrade.com/app</a> · Homepage <a href="https://wheelgrade.com">wheelgrade.com</a> · <a href="https://wheelgrade.com/support.html">Support</a></p>
+      <div class="card buy-card buy-compact">
+        <div class="buy-head">
+          <div>
+            <h2>Get WheelGrade</h2>
+            <p class="sub">One-time payment. No subscription.</p>
+          </div>
+          <div class="buy-price">
+            <span class="amount tnum">$9.99</span>
+            <span class="per">one-time</span>
+          </div>
+        </div>
+        <p style="margin-top:12px"><a class="btn btn-green btn-block" href="https://buy.stripe.com/dRmbJ079c1lC09G4omgnK00" target="_blank" rel="noopener">Buy WheelGrade — $9.99</a></p>
+        <div class="divider">
+          <p class="step-title">Already paid? Sign in here</p>
+          <p class="step-body">If you already paid — for example on another device — sign in with the same Apple or Google account to open your paid account. New here? Just buy above; your account is created at payment time.</p>
+          <div class="auth-grid">
+            <a class="btn btn-dark" data-auth-provider="apple" href="/app/auth/apple">Sign in with Apple</a>
+            <a class="btn btn-google" data-auth-provider="google" href="/app/auth/google"><span class="g">G</span> Sign in with Google</a>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:12px"><button class="btn btn-outline btn-sm" id="replay-walkthrough" type="button">Replay the intro</button></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Walkthrough modal -->
+<div class="modal" id="walkthrough-modal" role="dialog" aria-modal="true" aria-labelledby="walk-title">
+  <div class="modal-box">
+    <div class="walk-top">
+      <p class="walk-step" id="walk-step-label">Welcome · 1 of 3</p>
+      <button class="walk-skip" id="walk-skip" type="button">Skip intro</button>
+    </div>
+    <h2 class="walk-title" id="walk-title">Grade the trade before you make it</h2>
+    <div class="walk-body" id="walk-body"></div>
+    <div class="dots" id="walk-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+    <div class="walk-nav">
+      <button class="btn btn-outline" id="walk-back" type="button">Back</button>
+      <button class="btn btn-green" id="walk-next" type="button">Next</button>
+    </div>
+    <p class="walk-foot">For education only — not financial advice.</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
