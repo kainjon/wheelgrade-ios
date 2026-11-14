@@ -1,0 +1,110 @@
+name: iOS — Build & Upload to TestFlight
+
+# Manual trigger only: macOS runner minutes are the expensive part, and
+# every TestFlight upload needs a fresh build number, so builds run on
+# demand, not on every push.
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: 'What changed in this build (shown in TestFlight)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    runs-on: macos-15
+    env:
+      APPLE_TEAM_ID: QWK64596Q9
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 26
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$XCODE" ]; then echo "No Xcode 26 found on this runner:"; ls /Applications/ | grep -i xcode; exit 1; fi
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate icons
+        # No PNGs are committed (the GitHub push tool handles text only),
+        # so the AppIcon set, splash, and web/ fallback icons are drawn
+        # at build time from scripts/gen_icons.py (Pillow).
+        run: |
+          pip3 install --quiet Pillow
+          python3 scripts/gen_icons.py
+
+      - name: Sync Capacitor iOS project
+        # Copies the committed web/ snapshot into ios/App/App/public and
+        # regenerates the iOS config. web/ is synced from the Worker by
+        # ./sync-web.sh before a release (run locally, then commit).
+        run: npx cap sync ios
+
+      - name: Set build number from run number
+        # TestFlight rejects duplicate build numbers, so each run gets a
+        # unique one. Marketing version stays 1.0 until Jon bumps it.
+        run: |
+          perl -pi -e "s/CURRENT_PROJECT_VERSION = [0-9]+;/CURRENT_PROJECT_VERSION = ${{ github.run_number }};/g" ios/App/App.xcodeproj/project.pbxproj
+          grep -m1 CURRENT_PROJECT_VERSION ios/App/App.xcodeproj/project.pbxproj
+
+      - name: Install App Store Connect API key
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          ASC_KEY_P8: ${{ secrets.APP_STORE_CONNECT_API_KEY_P8 }}
+        run: |
+          mkdir -p ~/.private_keys
+          printf '%s' "$ASC_KEY_P8" > ~/.private_keys/AuthKey_${ASC_KEY_ID}.p8
+          chmod 600 ~/.private_keys/AuthKey_${ASC_KEY_ID}.p8
+
+      - name: Archive
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath build/WheelGrade.xcarchive archive \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$HOME/.private_keys/AuthKey_${ASC_KEY_ID}.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+
+      - name: Export IPA
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+        run: |
+          xcodebuild -exportArchive -archivePath build/WheelGrade.xcarchive \
+            -exportPath build -exportOptionsPlist ExportOptions.plist \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$HOME/.private_keys/AuthKey_${ASC_KEY_ID}.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+          ls -lh build/*.ipa
+
+      - name: Upload to TestFlight
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+        run: |
+          xcrun altool --upload-app -f build/WheelGrade.ipa -t ios \
+            --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+
+      - name: Keep the IPA as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WheelGrade-${{ github.run_number }}
+          path: build/*.ipa
+          if-no-files-found: warn
