@@ -1,1 +1,7 @@
-PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlcz4KICAgIDxzdHJpbmcgbmFtZT0iYXBwX25hbWUiPldoZWVsR3JhZGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idGl0bGVfYWN0aXZpdHlfbWFpbiI+V2hlZWxHcmFkZTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJwYWNrYWdlX25hbWUiPmNvbS53aGVlbGdyYWRlLmFwcDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJjdXN0b21fdXJsX3NjaGVtZSI+Y29tLndoZWVsZ3JhZGUuYXBwPC9zdHJpbmc+CjwvcmVzb3VyY2VzPgo=
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">WheelGrade</string>
+    <string name="title_activity_main">WheelGrade</string>
+    <string name="package_name">com.wheelgrade.app</string>
+    <string name="custom_url_scheme">com.wheelgrade.app</string>
+</resources>
