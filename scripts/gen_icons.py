@@ -1,1 +1,230 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJHZW5lcmF0ZSBXaGVlbEdyYWRlIGljb25zIGZyb20gdGhlIHZlY3RvciBsb2dvIChubyBiaW5hcnkgc291cmNlcykuCgpUaGUgaU9TIHJlcG8gc3RvcmVzIG5vIFBOR3MgKHRoZSBHaXRIdWIgcHVzaCB0b29sIGhhbmRsZXMgdGV4dCBvbmx5KSwgc28KdGhlIEFwcEljb24gc2V0LCBzcGxhc2gsIGFuZCB0aGUgd2ViLyBmYWxsYmFjayBpY29ucyBhcmUgZ2VuZXJhdGVkIGF0CmJ1aWxkIHRpbWUgZnJvbSB0aGlzIHNjcmlwdC4gVGhlIGxvZ28gaXMgdGhlIE9wdGlvbiBCIG1hcms6IGJsYWNrCmJhY2tncm91bmQsIGJyaWdodC1ncmVlbiBXLCBncmVlbiB1bmRlcmxpbmUg4oCUIGRyYXduIHdpdGggUElMLCBzbyB0aGUKb3V0cHV0IGlzIGJ5dGUtaWRlbnRpY2FsIHRvIHRoZSBzaGlwcGVkIFBXQSBpY29ucy4KClVzYWdlOiBweXRob24zIHNjcmlwdHMvZ2VuX2ljb25zLnB5ICAgKG5lZWRzIFBpbGxvdzogcGlwIGluc3RhbGwgUGlsbG93KQpSdW4gZnJvbSB0aGUgcmVwbyByb290LiBTYWZlIHRvIHJlLXJ1bjsgaXQgb3ZlcndyaXRlcyB0aGUgZ2VuZXJhdGVkIFBOR3MuCiIiIgppbXBvcnQganNvbgppbXBvcnQgb3MKZnJvbSBQSUwgaW1wb3J0IEltYWdlLCBJbWFnZURyYXcKClJPT1QgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5kaXJuYW1lKG9zLnBhdGguYWJzcGF0aChfX2ZpbGVfXykpKQpCTEFDSyA9ICgxMCwgMTAsIDEwKQpHUkVFTiA9ICgzNCwgMTk3LCA5NCkgICMgIzIyYzU1ZSBicmlnaHQgZ3JlZW4KIyBXIHBvbHlsaW5lIGluIGEgNjR4NjQgYm94IChzYW1lIGNvb3JkaW5hdGVzIGFzIHRoZSBzaGlwcGVkIFBXQSBpY29uKS4KV19QVFNfNjQgPSBbKDE4LCAyMCksICgyNiwgNDQpLCAoMzIsIDI4KSwgKDM4LCA0NCksICg0NiwgMjApXQoKCmRlZiBkcmF3X21hcmsoZHJhdywgc2l6ZSwgY3gsIGN5LCB3X3NjYWxlLCBsaW5lX3csIHVuZGVybGluZT1UcnVlKToKICAgICIiIkRyYXcgdGhlIGJyaWdodC1ncmVlbiBXICsgdW5kZXJsaW5lLCBjZW50cmVkIGF0IChjeCwgY3kpLiIiIgogICAgcHRzID0gWyhjeCArICh4IC0gMzIpICogd19zY2FsZSwgY3kgKyAoeSAtIDMyKSAqIHdfc2NhbGUpCiAgICAgICAgICAgZm9yIHgsIHkgaW4gV19QVFNfNjRdCiAgICBkcmF3LmxpbmUocHRzLCBmaWxsPUdSRUVOLCB3aWR0aD1saW5lX3csIGpvaW50PSJjdXJ2ZSIpCiAgICByID0gbGluZV93IC8vIDIKICAgIGZvciB4LCB5IGluIHB0czoKICAgICAgICBkcmF3LmVsbGlwc2UoW3ggLSByLCB5IC0gciwgeCArIHIsIHkgKyByXSwgZmlsbD1HUkVFTikKICAgIGlmIHVuZGVybGluZToKICAgICAgICB1dyA9IGludChzaXplICogMC40MTQpCiAgICAgICAgdWggPSBtYXgoNCwgaW50KHNpemUgKiAwLjAyMykpCiAgICAgICAgdXkgPSBpbnQoY3kgKyBzaXplICogMC4zMCkKICAgICAgICBkcmF3LnJvdW5kZWRfcmVjdGFuZ2xlKAogICAgICAgICAgICBbY3ggLSB1dyAvLyAyLCB1eSwgY3ggKyB1dyAvLyAyLCB1eSArIHVoXSwKICAgICAgICAgICAgcmFkaXVzPXVoIC8vIDIsIGZpbGw9R1JFRU4pCgoKZGVmIGljb24oc2l6ZSk6CiAgICAiIiJGdWxsIDUxMi1zdHlsZSBpY29uIGF0IGFueSBzcXVhcmUgc2l6ZSAoVyArIHVuZGVybGluZSkuIiIiCiAgICBpbWcgPSBJbWFnZS5uZXcoIlJHQiIsIChzaXplLCBzaXplKSwgQkxBQ0spCiAgICBkID0gSW1hZ2VEcmF3LkRyYXcoaW1nKQogICAgZHJhd19tYXJrKGQsIHNpemUsIHNpemUgLy8gMiwgaW50KHNpemUgKiAwLjQ2OSksCiAgICAgICAgICAgICAgd19zY2FsZT1zaXplIC8gNjQuMCwgbGluZV93PW1heCgyLCBpbnQoc2l6ZSAqIDAuMDc4KSkpCiAgICByZXR1cm4gaW1nCgoKZGVmIG1hc2thYmxlKHNpemUpOgogICAgIiIiSWNvbiB3aXRoIHRoZSBtYXJrIHNjYWxlZCB0byB0aGUgY2VudHJhbCA4MCUgc2FmZSB6b25lLiIiIgogICAgaW1nID0gSW1hZ2UubmV3KCJSR0IiLCAoc2l6ZSwgc2l6ZSksIEJMQUNLKQogICAgZCA9IEltYWdlRHJhdy5EcmF3KGltZykKICAgIHMgPSBzaXplICogMC43MgogICAgZHJhd19tYXJrKGQsIHNpemUsIHNpemUgLy8gMiwgaW50KHNpemUgKiAwLjQ2OSksCiAgICAgICAgICAgICAgd19zY2FsZT1zIC8gNjQuMCwgbGluZV93PW1heCgyLCBpbnQocyAqIDAuMDc4KSkpCiAgICByZXR1cm4gaW1nCgoKZGVmIHNwbGFzaChzaXplKToKICAgICIiIlNwbGFzaDogYmxhY2sgZmllbGQgd2l0aCB0aGUgbWFyayBjZW50cmVkIChubyB1bmRlcmxpbmUpLiIiIgogICAgaW1nID0gSW1hZ2UubmV3KCJSR0IiLCAoc2l6ZSwgc2l6ZSksIEJMQUNLKQogICAgZCA9IEltYWdlRHJhdy5EcmF3KGltZykKICAgIGRyYXdfbWFyayhkLCBzaXplLCBzaXplIC8vIDIsIHNpemUgLy8gMiwKICAgICAgICAgICAgICB3X3NjYWxlPXNpemUgLyA2NC4wICogMC42LCBsaW5lX3c9bWF4KDIsIGludChzaXplICogMC4wNSkpLAogICAgICAgICAgICAgIHVuZGVybGluZT1GYWxzZSkKICAgIHJldHVybiBpbWcKCgpkZWYgc3BsYXNoX3JlY3Qod2lkdGgsIGhlaWdodCk6CiAgICAiIiJTcGxhc2ggYXQgYSBub24tc3F1YXJlIHNpemU6IGJsYWNrIGZpZWxkLCBtYXJrIGNlbnRyZWQgb24gdGhlCiAgICBzaG9ydGVyIHNpZGUgKHNhbWUgMC42IHNjYWxlIGFzIHNwbGFzaCgpKS4iIiIKICAgIGltZyA9IEltYWdlLm5ldygiUkdCIiwgKHdpZHRoLCBoZWlnaHQpLCBCTEFDSykKICAgIGQgPSBJbWFnZURyYXcuRHJhdyhpbWcpCiAgICBzID0gbWluKHdpZHRoLCBoZWlnaHQpCiAgICBkcmF3X21hcmsoZCwgcywgd2lkdGggLy8gMiwgaGVpZ2h0IC8vIDIsCiAgICAgICAgICAgICAgd19zY2FsZT1zIC8gNjQuMCAqIDAuNiwgbGluZV93PW1heCgyLCBpbnQocyAqIDAuMDUpKSwKICAgICAgICAgICAgICB1bmRlcmxpbmU9RmFsc2UpCiAgICByZXR1cm4gaW1nCgoKIyAtLS0gQW5kcm9pZCAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTGF1bmNoZXIgZGVuc2l0aWVzIChsZWdhY3kgKyByb3VuZCkgYW5kIGFkYXB0aXZlLWljb24gZm9yZWdyb3VuZCBzaXplcy4KQU5EUk9JRF9MQVVOQ0hFUiA9IHsibWRwaSI6IDQ4LCAiaGRwaSI6IDcyLCAieGhkcGkiOiA5NiwKICAgICAgICAgICAgICAgICAgICAieHhoZHBpIjogMTQ0LCAieHh4aGRwaSI6IDE5Mn0KQU5EUk9JRF9GT1JFR1JPVU5EID0geyJtZHBpIjogMTA4LCAiaGRwaSI6IDE2MiwgInhoZHBpIjogMjE2LAogICAgICAgICAgICAgICAgICAgICAgInh4aGRwaSI6IDMyNCwgInh4eGhkcGkiOiA0MzJ9CiMgU3BsYXNoIHNpemVzIGdlbmVyYXRlZCBieSBgbnB4IGNhcCBhZGQgYW5kcm9pZGAgKHBvcnRyYWl0ICsgbGFuZHNjYXBlKS4KQU5EUk9JRF9TUExBU0ggPSBbCiAgICAoImRyYXdhYmxlIiwgNDgwLCAzMjApLAogICAgKCJkcmF3YWJsZS1sYW5kLW1kcGkiLCA0ODAsIDMyMCksCiAgICAoImRyYXdhYmxlLWxhbmQtaGRwaSIsIDgwMCwgNDgwKSwKICAgICgiZHJhd2FibGUtbGFuZC14aGRwaSIsIDEyODAsIDcyMCksCiAgICAoImRyYXdhYmxlLWxhbmQteHhoZHBpIiwgMTYwMCwgOTYwKSwKICAgICgiZHJhd2FibGUtbGFuZC14eHhoZHBpIiwgMTkyMCwgMTI4MCksCiAgICAoImRyYXdhYmxlLXBvcnQtbWRwaSIsIDMyMCwgNDgwKSwKICAgICgiZHJhd2FibGUtcG9ydC1oZHBpIiwgNDgwLCA4MDApLAogICAgKCJkcmF3YWJsZS1wb3J0LXhoZHBpIiwgNzIwLCAxMjgwKSwKICAgICgiZHJhd2FibGUtcG9ydC14eGhkcGkiLCA5NjAsIDE2MDApLAogICAgKCJkcmF3YWJsZS1wb3J0LXh4eGhkcGkiLCAxMjgwLCAxOTIwKSwKXQoKIyBXIHBvbHlsaW5lIHNjYWxlZCBmcm9tIHRoZSA2NC1ib3ggaW50byBhIDEwOGRwIGFkYXB0aXZlLWljb24gdmlld3BvcnQsCiMgZm9yIHRoZSBkcmF3YWJsZS12MjQgZm9yZWdyb3VuZCB2ZWN0b3IgKHN0cm9rZSwgbm8gZmlsbCkuCl9XMTA4ID0gWyhyb3VuZCh4ICogMTA4IC8gNjQsIDIpLCByb3VuZCh5ICogMTA4IC8gNjQsIDIpKQogICAgICAgICBmb3IgeCwgeSBpbiBXX1BUU182NF0KX1dfUEFUSCA9ICJNIiArICIgTCIuam9pbihmInt4fSx7eX0iIGZvciB4LCB5IGluIF9XMTA4KQojIFVuZGVybGluZSBiYXIgaW4gdGhlIDEwOCB2aWV3cG9ydCAoc2FtZSBwcm9wb3J0aW9ucyBhcyBpY29uKCkpLgpfVVcgPSByb3VuZCgxMDggKiAwLjQxNCwgMikKX1VYID0gcm91bmQoKDEwOCAtIF9VVykgLyAyLCAyKQpfVVkgPSByb3VuZCgxMDggKiAwLjQ2OSArIDEwOCAqIDAuMzAsIDIpCl9VSCA9IHJvdW5kKG1heCg0LCAxMDggKiAwLjAyMyksIDIpCgpBTkRST0lEX0ZHX1ZFQ1RPUiA9IGYiIiI8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/Pgo8dmVjdG9yIHhtbG5zOmFuZHJvaWQ9Imh0dHA6Ly9zY2hlbWFzLmFuZHJvaWQuY29tL2Fway9yZXMvYW5kcm9pZCIKICAgIGFuZHJvaWQ6d2lkdGg9IjEwOGRwIgogICAgYW5kcm9pZDpoZWlnaHQ9IjEwOGRwIgogICAgYW5kcm9pZDp2aWV3cG9ydFdpZHRoPSIxMDgiCiAgICBhbmRyb2lkOnZpZXdwb3J0SGVpZ2h0PSIxMDgiPgogICAgPHBhdGgKICAgICAgICBhbmRyb2lkOnBhdGhEYXRhPSJ7X1dfUEFUSH0iCiAgICAgICAgYW5kcm9pZDpzdHJva2VDb2xvcj0iIzIyQzU1RSIKICAgICAgICBhbmRyb2lkOnN0cm9rZVdpZHRoPSI4IgogICAgICAgIGFuZHJvaWQ6c3Ryb2tlTGluZUNhcD0icm91bmQiCiAgICAgICAgYW5kcm9pZDpzdHJva2VMaW5lSm9pbj0icm91bmQiCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IiMwMDAwMDAwMCIgLz4KICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTXtfVVh9LHtfVVl9IGh7X1VXfSB2e19VSH0gaC17X1VXfSB6IgogICAgICAgIGFuZHJvaWQ6ZmlsbENvbG9yPSIjMjJDNTVFIiAvPgo8L3ZlY3Rvcj4KIiIiCgpBTkRST0lEX0JHX1ZFQ1RPUiA9ICIiIjw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+Cjx2ZWN0b3IgeG1sbnM6YW5kcm9pZD0iaHR0cDovL3NjaGVtYXMuYW5kcm9pZC5jb20vYXBrL3Jlcy9hbmRyb2lkIgogICAgYW5kcm9pZDp3aWR0aD0iMTA4ZHAiCiAgICBhbmRyb2lkOmhlaWdodD0iMTA4ZHAiCiAgICBhbmRyb2lkOnZpZXdwb3J0V2lkdGg9IjEwOCIKICAgIGFuZHJvaWQ6dmlld3BvcnRIZWlnaHQ9IjEwOCI+CiAgICA8cGF0aAogICAgICAgIGFuZHJvaWQ6ZmlsbENvbG9yPSIjMEEwQTBBIgogICAgICAgIGFuZHJvaWQ6cGF0aERhdGE9Ik0wLDBoMTA4djEwOGgtMTA4eiIgLz4KPC92ZWN0b3I+CiIiIgoKCmRlZiBhbmRyb2lkX2ljb25zKCk6CiAgICAiIiJXcml0ZSBldmVyeSBBbmRyb2lkIGxhdW5jaGVyICsgc3BsYXNoIFBORywgYW5kIHRoZSAodGV4dCkgaWNvbgogICAgZHJhd2FibGVzLiBUaGUgUE5HcyBhcmUgZ2VuZXJhdGVkIGF0IGJ1aWxkIHRpbWUgKHNlZSAuZ2l0aWdub3JlKTsKICAgIHRoZSBYTUwgZHJhd2FibGVzIGFyZSBjb21taXR0ZWQgc291cmNlLiIiIgogICAgcmVzID0gb3MucGF0aC5qb2luKFJPT1QsICJhbmRyb2lkIiwgImFwcCIsICJzcmMiLCAibWFpbiIsICJyZXMiKQogICAgbWFkZSA9IFtdCiAgICAjIExlZ2FjeSArIHJvdW5kIGxhdW5jaGVyIGljb25zIChmdWxsIE9wdGlvbiBCIG1hcmspLgogICAgZm9yIGRlbnNpdHksIHNpemUgaW4gQU5EUk9JRF9MQVVOQ0hFUi5pdGVtcygpOgogICAgICAgIGZvciBuYW1lIGluICgiaWNfbGF1bmNoZXIucG5nIiwgImljX2xhdW5jaGVyX3JvdW5kLnBuZyIpOgogICAgICAgICAgICBvdXQgPSBvcy5wYXRoLmpvaW4ocmVzLCBmIm1pcG1hcC17ZGVuc2l0eX0iLCBuYW1lKQogICAgICAgICAgICBpY29uKHNpemUpLnNhdmUob3V0LCAiUE5HIikKICAgICAgICAgICAgbWFkZS5hcHBlbmQob3V0KQogICAgIyBBZGFwdGl2ZS1pY29uIGZvcmVncm91bmRzIChtYXJrIHNjYWxlZCB0byB0aGUgc2FmZSB6b25lLCBhcyBtYXNrYWJsZSkuCiAgICBmb3IgZGVuc2l0eSwgc2l6ZSBpbiBBTkRST0lEX0ZPUkVHUk9VTkQuaXRlbXMoKToKICAgICAgICBvdXQgPSBvcy5wYXRoLmpvaW4ocmVzLCBmIm1pcG1hcC17ZGVuc2l0eX0iLAogICAgICAgICAgICAgICAgICAgICAgICAgICAiaWNfbGF1bmNoZXJfZm9yZWdyb3VuZC5wbmciKQogICAgICAgIG1hc2thYmxlKHNpemUpLnNhdmUob3V0LCAiUE5HIikKICAgICAgICBtYWRlLmFwcGVuZChvdXQpCiAgICAjIFNwbGFzaCBzY3JlZW5zIChibGFjayBmaWVsZCwgY2VudHJlZCBtYXJrLCBubyB1bmRlcmxpbmUpLgogICAgZm9yIGQsIHcsIGggaW4gQU5EUk9JRF9TUExBU0g6CiAgICAgICAgb3V0ID0gb3MucGF0aC5qb2luKHJlcywgZCwgInNwbGFzaC5wbmciKQogICAgICAgIG9zLm1ha2VkaXJzKG9zLnBhdGguZGlybmFtZShvdXQpLCBleGlzdF9vaz1UcnVlKQogICAgICAgIHNwbGFzaF9yZWN0KHcsIGgpLnNhdmUob3V0LCAiUE5HIikKICAgICAgICBtYWRlLmFwcGVuZChvdXQpCiAgICAjIEFkYXB0aXZlLWljb24gYmFja2dyb3VuZCBjb2xvdXI6IGJsYWNrICh3YXMgd2hpdGUgaW4gdGhlIHRlbXBsYXRlKS4KICAgIHdpdGggb3Blbihvcy5wYXRoLmpvaW4ocmVzLCAidmFsdWVzIiwgImljX2xhdW5jaGVyX2JhY2tncm91bmQueG1sIiksCiAgICAgICAgICAgICAgInciKSBhcyBmOgogICAgICAgIGYud3JpdGUoJzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+XG48cmVzb3VyY2VzPlxuJwogICAgICAgICAgICAgICAgJyAgICA8Y29sb3IgbmFtZT0iaWNfbGF1bmNoZXJfYmFja2dyb3VuZCI+IzBBMEEwQTwvY29sb3I+XG4nCiAgICAgICAgICAgICAgICAnPC9yZXNvdXJjZXM+JykKICAgICMgRHJhd2FibGUgdmVjdG9ycyAocmVwbGFjZSB0aGUgdGVhbCBDYXBhY2l0b3IgZGVmYXVsdHMpLgogICAgd2l0aCBvcGVuKG9zLnBhdGguam9pbihyZXMsICJkcmF3YWJsZSIsICJpY19sYXVuY2hlcl9iYWNrZ3JvdW5kLnhtbCIpLAogICAgICAgICAgICAgICJ3IikgYXMgZjoKICAgICAgICBmLndyaXRlKEFORFJPSURfQkdfVkVDVE9SKQogICAgd2l0aCBvcGVuKG9zLnBhdGguam9pbihyZXMsICJkcmF3YWJsZS12MjQiLCAiaWNfbGF1bmNoZXJfZm9yZWdyb3VuZC54bWwiKSwKICAgICAgICAgICAgICAidyIpIGFzIGY6CiAgICAgICAgZi53cml0ZShBTkRST0lEX0ZHX1ZFQ1RPUikKICAgIHByaW50KGYiZ2VuZXJhdGVkIHtsZW4obWFkZSl9IEFuZHJvaWQgaWNvbnMiKQoKCmRlZiBtYWluKCk6CiAgICBhcHBpY29uX2RpciA9IG9zLnBhdGguam9pbigKICAgICAgICBST09ULCAiaW9zIiwgIkFwcCIsICJBcHAiLCAiQXNzZXRzLnhjYXNzZXRzIiwgIkFwcEljb24uYXBwaWNvbnNldCIpCiAgICB3aXRoIG9wZW4ob3MucGF0aC5qb2luKGFwcGljb25fZGlyLCAiQ29udGVudHMuanNvbiIpKSBhcyBmOgogICAgICAgIGNvbnRlbnRzID0ganNvbi5sb2FkKGYpCiAgICBtYWRlID0gW10KICAgICMgTWFzdGVyIDEwMjQgaWNvbiAoYWxzbyB0aGUgQXBwIFN0b3JlIGxpc3RpbmcgaWNvbiBzb3VyY2UpLgogICAgbWFzdGVyID0gaWNvbigxMDI0KQogICAgbWFzdGVyX3BhdGggPSBvcy5wYXRoLmpvaW4oUk9PVCwgImFzc2V0cyIsICJpY29uLnBuZyIpCiAgICBvcy5tYWtlZGlycyhvcy5wYXRoLmRpcm5hbWUobWFzdGVyX3BhdGgpLCBleGlzdF9vaz1UcnVlKQogICAgbWFzdGVyLnNhdmUobWFzdGVyX3BhdGgsICJQTkciKQogICAgbWFkZS5hcHBlbmQobWFzdGVyX3BhdGgpCiAgICAjIEV2ZXJ5IEFwcEljb24gc2l6ZSBsaXN0ZWQgaW4gQ29udGVudHMuanNvbi4KICAgIGZvciBlbnRyeSBpbiBjb250ZW50c1siaW1hZ2VzIl06CiAgICAgICAgZm4gPSBlbnRyeS5nZXQoImZpbGVuYW1lIikKICAgICAgICBpZiBub3QgZm46CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgcHggPSBpbnQocm91bmQoZmxvYXQoZW50cnlbInNpemUiXS5zcGxpdCgieCIpWzBdKSAqIGludChlbnRyeVsic2NhbGUiXS5yc3RyaXAoIngiKSkpKQogICAgICAgIG91dCA9IG9zLnBhdGguam9pbihhcHBpY29uX2RpciwgZm4pCiAgICAgICAgbWFzdGVyLnJlc2l6ZSgocHgsIHB4KSwgSW1hZ2UuTEFOQ1pPUykuc2F2ZShvdXQsICJQTkciKQogICAgICAgIG1hZGUuYXBwZW5kKG91dCkKICAgICMgU3BsYXNoICgyNzMyKS4KICAgIHNwbGFzaF9wYXRoID0gb3MucGF0aC5qb2luKFJPT1QsICJhc3NldHMiLCAic3BsYXNoLnBuZyIpCiAgICBzcGxhc2goMjczMikuc2F2ZShzcGxhc2hfcGF0aCwgIlBORyIpCiAgICBtYWRlLmFwcGVuZChzcGxhc2hfcGF0aCkKICAgICMgd2ViLyBmYWxsYmFjayBpY29ucyAoY29waWVkIGludG8gdGhlIGlPUyBidW5kbGUgYnkgYGNhcCBzeW5jYCkuCiAgICB3ZWIgPSBvcy5wYXRoLmpvaW4oUk9PVCwgIndlYiIpCiAgICBvcy5tYWtlZGlycyh3ZWIsIGV4aXN0X29rPVRydWUpCiAgICBmb3IgbmFtZSwgc2l6ZSwgZm4gaW4gWwogICAgICAgICgiaWNvbi0xOTIucG5nIiwgMTkyLCBpY29uKSwKICAgICAgICAoImljb24tNTEyLnBuZyIsIDUxMiwgaWNvbiksCiAgICAgICAgKCJpY29uLTUxMi1tYXNrYWJsZS5wbmciLCA1MTIsIG1hc2thYmxlKSwKICAgICAgICAoImFwcGxlLXRvdWNoLWljb24ucG5nIiwgMTgwLCBpY29uKSwKICAgIF06CiAgICAgICAgb3V0ID0gb3MucGF0aC5qb2luKHdlYiwgbmFtZSkKICAgICAgICBmbihzaXplKS5zYXZlKG91dCwgIlBORyIpCiAgICAgICAgbWFkZS5hcHBlbmQob3V0KQogICAgcHJpbnQoZiJnZW5lcmF0ZWQge2xlbihtYWRlKX0gaWNvbnMiKQogICAgIyBBbmRyb2lkIGxhdW5jaGVyICsgc3BsYXNoIChvbmx5IGlmIHRoZSBhbmRyb2lkLyBwbGF0Zm9ybSBleGlzdHMpLgogICAgaWYgb3MucGF0aC5pc2Rpcihvcy5wYXRoLmpvaW4oUk9PVCwgImFuZHJvaWQiKSk6CiAgICAgICAgYW5kcm9pZF9pY29ucygpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+"""Generate WheelGrade icons from the vector logo (no binary sources).
+
+The iOS repo stores no PNGs (the GitHub push tool handles text only), so
+the AppIcon set, splash, and the web/ fallback icons are generated at
+build time from this script. The logo is the Option B mark: black
+background, bright-green W, green underline — drawn with PIL, so the
+output is byte-identical to the shipped PWA icons.
+
+Usage: python3 scripts/gen_icons.py   (needs Pillow: pip install Pillow)
+Run from the repo root. Safe to re-run; it overwrites the generated PNGs.
+"""
+import json
+import os
+from PIL import Image, ImageDraw
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BLACK = (10, 10, 10)
+GREEN = (34, 197, 94)  # #22c55e bright green
+# W polyline in a 64x64 box (same coordinates as the shipped PWA icon).
+W_PTS_64 = [(18, 20), (26, 44), (32, 28), (38, 44), (46, 20)]
+
+
+def draw_mark(draw, size, cx, cy, w_scale, line_w, underline=True):
+    """Draw the bright-green W + underline, centred at (cx, cy)."""
+    pts = [(cx + (x - 32) * w_scale, cy + (y - 32) * w_scale)
+           for x, y in W_PTS_64]
+    draw.line(pts, fill=GREEN, width=line_w, joint="curve")
+    r = line_w // 2
+    for x, y in pts:
+        draw.ellipse([x - r, y - r, x + r, y + r], fill=GREEN)
+    if underline:
+        uw = int(size * 0.414)
+        uh = max(4, int(size * 0.023))
+        uy = int(cy + size * 0.30)
+        draw.rounded_rectangle(
+            [cx - uw // 2, uy, cx + uw // 2, uy + uh],
+            radius=uh // 2, fill=GREEN)
+
+
+def icon(size):
+    """Full 512-style icon at any square size (W + underline)."""
+    img = Image.new("RGB", (size, size), BLACK)
+    d = ImageDraw.Draw(img)
+    draw_mark(d, size, size // 2, int(size * 0.469),
+              w_scale=size / 64.0, line_w=max(2, int(size * 0.078)))
+    return img
+
+
+def maskable(size):
+    """Icon with the mark scaled to the central 80% safe zone."""
+    img = Image.new("RGB", (size, size), BLACK)
+    d = ImageDraw.Draw(img)
+    s = size * 0.72
+    draw_mark(d, size, size // 2, int(size * 0.469),
+              w_scale=s / 64.0, line_w=max(2, int(s * 0.078)))
+    return img
+
+
+def splash(size):
+    """Splash: black field with the mark centred (no underline)."""
+    img = Image.new("RGB", (size, size), BLACK)
+    d = ImageDraw.Draw(img)
+    draw_mark(d, size, size // 2, size // 2,
+              w_scale=size / 64.0 * 0.6, line_w=max(2, int(size * 0.05)),
+              underline=False)
+    return img
+
+
+def splash_rect(width, height):
+    """Splash at a non-square size: black field, mark centred on the
+    shorter side (same 0.6 scale as splash())."""
+    img = Image.new("RGB", (width, height), BLACK)
+    d = ImageDraw.Draw(img)
+    s = min(width, height)
+    draw_mark(d, s, width // 2, height // 2,
+              w_scale=s / 64.0 * 0.6, line_w=max(2, int(s * 0.05)),
+              underline=False)
+    return img
+
+
+# --- Android -------------------------------------------------------------
+# Launcher densities (legacy + round) and adaptive-icon foreground sizes.
+ANDROID_LAUNCHER = {"mdpi": 48, "hdpi": 72, "xhdpi": 96,
+                    "xxhdpi": 144, "xxxhdpi": 192}
+ANDROID_FOREGROUND = {"mdpi": 108, "hdpi": 162, "xhdpi": 216,
+                      "xxhdpi": 324, "xxxhdpi": 432}
+# Splash sizes generated by `npx cap add android` (portrait + landscape).
+ANDROID_SPLASH = [
+    ("drawable", 480, 320),
+    ("drawable-land-mdpi", 480, 320),
+    ("drawable-land-hdpi", 800, 480),
+    ("drawable-land-xhdpi", 1280, 720),
+    ("drawable-land-xxhdpi", 1600, 960),
+    ("drawable-land-xxxhdpi", 1920, 1280),
+    ("drawable-port-mdpi", 320, 480),
+    ("drawable-port-hdpi", 480, 800),
+    ("drawable-port-xhdpi", 720, 1280),
+    ("drawable-port-xxhdpi", 960, 1600),
+    ("drawable-port-xxxhdpi", 1280, 1920),
+]
+
+# W polyline scaled from the 64-box into a 108dp adaptive-icon viewport,
+# for the drawable-v24 foreground vector (stroke, no fill).
+_W108 = [(round(x * 108 / 64, 2), round(y * 108 / 64, 2))
+         for x, y in W_PTS_64]
+_W_PATH = "M" + " L".join(f"{x},{y}" for x, y in _W108)
+# Underline bar in the 108 viewport (same proportions as icon()).
+_UW = round(108 * 0.414, 2)
+_UX = round((108 - _UW) / 2, 2)
+_UY = round(108 * 0.469 + 108 * 0.30, 2)
+_UH = round(max(4, 108 * 0.023), 2)
+
+ANDROID_FG_VECTOR = f"""<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="{_W_PATH}"
+        android:strokeColor="#22C55E"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M{_UX},{_UY} h{_UW} v{_UH} h-{_UW} z"
+        android:fillColor="#22C55E" />
+</vector>
+"""
+
+ANDROID_BG_VECTOR = """<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0A0A0A"
+        android:pathData="M0,0h108v108h-108z" />
+</vector>
+"""
+
+
+def android_icons():
+    """Write every Android launcher + splash PNG, and the (text) icon
+    drawables. The PNGs are generated at build time (see .gitignore);
+    the XML drawables are committed source."""
+    res = os.path.join(ROOT, "android", "app", "src", "main", "res")
+    made = []
+    # Legacy + round launcher icons (full Option B mark).
+    for density, size in ANDROID_LAUNCHER.items():
+        for name in ("ic_launcher.png", "ic_launcher_round.png"):
+            out = os.path.join(res, f"mipmap-{density}", name)
+            icon(size).save(out, "PNG")
+            made.append(out)
+    # Adaptive-icon foregrounds (mark scaled to the safe zone, as maskable).
+    for density, size in ANDROID_FOREGROUND.items():
+        out = os.path.join(res, f"mipmap-{density}",
+                           "ic_launcher_foreground.png")
+        maskable(size).save(out, "PNG")
+        made.append(out)
+    # Splash screens (black field, centred mark, no underline).
+    for d, w, h in ANDROID_SPLASH:
+        out = os.path.join(res, d, "splash.png")
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        splash_rect(w, h).save(out, "PNG")
+        made.append(out)
+    # Adaptive-icon background colour: black (was white in the template).
+    with open(os.path.join(res, "values", "ic_launcher_background.xml"),
+              "w") as f:
+        f.write('<?xml version="1.0" encoding="utf-8"?>\n<resources>\n'
+                '    <color name="ic_launcher_background">#0A0A0A</color>\n'
+                '</resources>')
+    # Drawable vectors (replace the teal Capacitor defaults).
+    with open(os.path.join(res, "drawable", "ic_launcher_background.xml"),
+              "w") as f:
+        f.write(ANDROID_BG_VECTOR)
+    with open(os.path.join(res, "drawable-v24", "ic_launcher_foreground.xml"),
+              "w") as f:
+        f.write(ANDROID_FG_VECTOR)
+    print(f"generated {len(made)} Android icons")
+
+
+def main():
+    appicon_dir = os.path.join(
+        ROOT, "ios", "App", "App", "Assets.xcassets", "AppIcon.appiconset")
+    with open(os.path.join(appicon_dir, "Contents.json")) as f:
+        contents = json.load(f)
+    made = []
+    # Master 1024 icon (also the App Store listing icon source).
+    master = icon(1024)
+    master_path = os.path.join(ROOT, "assets", "icon.png")
+    os.makedirs(os.path.dirname(master_path), exist_ok=True)
+    master.save(master_path, "PNG")
+    made.append(master_path)
+    # Every AppIcon size listed in Contents.json.
+    for entry in contents["images"]:
+        fn = entry.get("filename")
+        if not fn:
+            continue
+        px = int(round(float(entry["size"].split("x")[0]) * int(entry["scale"].rstrip("x"))))
+        out = os.path.join(appicon_dir, fn)
+        master.resize((px, px), Image.LANCZOS).save(out, "PNG")
+        made.append(out)
+    # Splash (2732).
+    splash_path = os.path.join(ROOT, "assets", "splash.png")
+    splash(2732).save(splash_path, "PNG")
+    made.append(splash_path)
+    # web/ fallback icons (copied into the iOS bundle by `cap sync`).
+    web = os.path.join(ROOT, "web")
+    os.makedirs(web, exist_ok=True)
+    for name, size, fn in [
+        ("icon-192.png", 192, icon),
+        ("icon-512.png", 512, icon),
+        ("icon-512-maskable.png", 512, maskable),
+        ("apple-touch-icon.png", 180, icon),
+    ]:
+        out = os.path.join(web, name)
+        fn(size).save(out, "PNG")
+        made.append(out)
+    print(f"generated {len(made)} icons")
+    # Android launcher + splash (only if the android/ platform exists).
+    if os.path.isdir(os.path.join(ROOT, "android")):
+        android_icons()
+
+
+if __name__ == "__main__":
+    main()
