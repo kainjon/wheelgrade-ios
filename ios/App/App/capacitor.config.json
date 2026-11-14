@@ -1,0 +1,14 @@
+{
+	"appId": "com.wheelgrade.app",
+	"appName": "WheelGrade",
+	"webDir": "web",
+	"backgroundColor": "#ffffff",
+	"server": {
+		"url": "https://wheelgrade.com/app/",
+		"cleartext": false
+	},
+	"ios": {
+		"contentInset": "always"
+	},
+	"packageClassList": []
+}
