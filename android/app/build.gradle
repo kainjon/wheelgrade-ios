@@ -19,7 +19,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         // versionCode comes from CI (-PwheelgradeVersionCode=<run number>);
         // versionName stays 1.0 until Jon bumps it.
-        versionCode (project.findProperty('wheelgradeVersionCode') ?: 1) as int
+        versionCode (project.findProperty('wheelgradeVersionCode') ?: '1').toString().toInteger()
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
