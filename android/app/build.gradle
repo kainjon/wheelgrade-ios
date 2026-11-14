@@ -19,7 +19,13 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         // versionCode comes from CI (-PwheelgradeVersionCode=<run number>);
         // versionName stays 1.0 until Jon bumps it.
-        versionCode (project.findProperty('wheelgradeVersionCode') ?: '1').toString().toInteger()
+        // parsed defensively so a missing/unparseable value falls back to 1.
+        def vcRaw = project.findProperty('wheelgradeVersionCode')
+        def vcParsed = 1
+        if (vcRaw != null) {
+            try { vcParsed = Integer.parseInt(vcRaw.toString()) } catch (Exception ignored) { vcParsed = 1 }
+        }
+        versionCode vcParsed
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
