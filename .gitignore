@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+# Generated at build time by scripts/gen_icons.py (no PNGs are committed).
+assets/icon.png
+assets/splash.png
+ios/App/App/Assets.xcassets/AppIcon.appiconset/*.png
+web/icon-192.png
+web/icon-512.png
+web/icon-512-maskable.png
+web/apple-touch-icon.png
