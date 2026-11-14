@@ -1,1 +1,80 @@
-YXBwbHkgcGx1Z2luOiAnY29tLmFuZHJvaWQuYXBwbGljYXRpb24nCgovLyBSZWxlYXNlIHNpZ25pbmcgY29tZXMgZnJvbSBhbmRyb2lkL2tleXN0b3JlLnByb3BlcnRpZXMsIHdoaWNoIHRoZSBDSQovLyB3b3JrZmxvdyB3cml0ZXMgZnJvbSBHaXRIdWIgc2VjcmV0cyAobmV2ZXIgY29tbWl0dGVkKS4gV2l0aG91dCBpdCB0aGUKLy8gcmVsZWFzZSBidWlsZCBpcyB1bnNpZ25lZDsgZGVidWcgYnVpbGRzIGFyZSB1bmFmZmVjdGVkLgovLyAgIHN0b3JlRmlsZSwgc3RvcmVQYXNzd29yZCwga2V5QWxpYXMsIGtleVBhc3N3b3JkCmRlZiBrZXlzdG9yZVByb3BlcnRpZXNGaWxlID0gcm9vdFByb2plY3QuZmlsZSgia2V5c3RvcmUucHJvcGVydGllcyIpCmRlZiBrZXlzdG9yZVByb3BlcnRpZXMgPSBuZXcgUHJvcGVydGllcygpCmlmIChrZXlzdG9yZVByb3BlcnRpZXNGaWxlLmV4aXN0cygpKSB7CiAgICBrZXlzdG9yZVByb3BlcnRpZXMubG9hZChuZXcgRmlsZUlucHV0U3RyZWFtKGtleXN0b3JlUHJvcGVydGllc0ZpbGUpKQp9CgphbmRyb2lkIHsKICAgIG5hbWVzcGFjZSA9ICJjb20ud2hlZWxncmFkZS5hcHAiCiAgICBjb21waWxlU2RrID0gcm9vdFByb2plY3QuZXh0LmNvbXBpbGVTZGtWZXJzaW9uCiAgICBkZWZhdWx0Q29uZmlnIHsKICAgICAgICBhcHBsaWNhdGlvbklkICJjb20ud2hlZWxncmFkZS5hcHAiCiAgICAgICAgbWluU2RrVmVyc2lvbiByb290UHJvamVjdC5leHQubWluU2RrVmVyc2lvbgogICAgICAgIHRhcmdldFNka1ZlcnNpb24gcm9vdFByb2plY3QuZXh0LnRhcmdldFNka1ZlcnNpb24KICAgICAgICAvLyB2ZXJzaW9uQ29kZSBjb21lcyBmcm9tIENJICgtUHdoZWVsZ3JhZGVWZXJzaW9uQ29kZT08cnVuIG51bWJlcj4pOwogICAgICAgIC8vIHZlcnNpb25OYW1lIHN0YXlzIDEuMCB1bnRpbCBKb24gYnVtcHMgaXQuCiAgICAgICAgdmVyc2lvbkNvZGUgKHByb2plY3QuZmluZFByb3BlcnR5KCd3aGVlbGdyYWRlVmVyc2lvbkNvZGUnKSA/OiAxKSBhcyBpbnQKICAgICAgICB2ZXJzaW9uTmFtZSAiMS4wIgogICAgICAgIHRlc3RJbnN0cnVtZW50YXRpb25SdW5uZXIgImFuZHJvaWR4LnRlc3QucnVubmVyLkFuZHJvaWRKVW5pdFJ1bm5lciIKICAgICAgICBhYXB0T3B0aW9ucyB7CiAgICAgICAgICAgICAvLyBGaWxlcyBhbmQgZGlycyB0byBvbWl0IGZyb20gdGhlIHBhY2thZ2VkIGFzc2V0cyBkaXIsIG1vZGlmaWVkIHRvIGFjY29tbW9kYXRlIG1vZGVybiB3ZWIgYXBwcy4KICAgICAgICAgICAgIC8vIERlZmF1bHQ6IGh0dHBzOi8vYW5kcm9pZC5nb29nbGVzb3VyY2UuY29tL3BsYXRmb3JtL2ZyYW1ld29ya3MvYmFzZS8rLzI4MmUxODFiNThjZjcyYjZjYTc3MGRjN2NhNWY5MWYxMzU0NDQ1MDIvdG9vbHMvYWFwdC9BYXB0QXNzZXRzLmNwcCM2MQogICAgICAgICAgICBpZ25vcmVBc3NldHNQYXR0ZXJuID0gJyEuc3ZuOiEuZ2l0OiEuZHNfc3RvcmU6ISouc2NjOi4qOiFDVlM6IXRodW1icy5kYjohcGljYXNhLmluaTohKn4nCiAgICAgICAgfQogICAgfQogICAgc2lnbmluZ0NvbmZpZ3MgewogICAgICAgIHJlbGVhc2UgewogICAgICAgICAgICAvLyBPbmx5IGFwcGxpZWQgd2hlbiBrZXlzdG9yZS5wcm9wZXJ0aWVzIGV4aXN0cyAoQ0kgcmVsZWFzZQogICAgICAgICAgICAvLyBidWlsZHMpLiBBIG1pc3Npbmcga2V5c3RvcmUgbGVhdmVzIHRoZSBidWlsZCB1bnNpZ25lZAogICAgICAgICAgICAvLyByYXRoZXIgdGhhbiBmYWlsaW5nIHRoZSBjb25maWd1cmF0aW9uIHBoYXNlLgogICAgICAgICAgICBpZiAoa2V5c3RvcmVQcm9wZXJ0aWVzRmlsZS5leGlzdHMoKSkgewogICAgICAgICAgICAgICAgc3RvcmVGaWxlIGZpbGUoa2V5c3RvcmVQcm9wZXJ0aWVzWydzdG9yZUZpbGUnXSkKICAgICAgICAgICAgICAgIHN0b3JlUGFzc3dvcmQga2V5c3RvcmVQcm9wZXJ0aWVzWydzdG9yZVBhc3N3b3JkJ10KICAgICAgICAgICAgICAgIGtleUFsaWFzIGtleXN0b3JlUHJvcGVydGllc1sna2V5QWxpYXMnXQogICAgICAgICAgICAgICAga2V5UGFzc3dvcmQga2V5c3RvcmVQcm9wZXJ0aWVzWydrZXlQYXNzd29yZCddCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICBidWlsZFR5cGVzIHsKICAgICAgICByZWxlYXNlIHsKICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyBzaWduaW5nQ29uZmlncy5yZWxlYXNlCiAgICAgICAgICAgIG1pbmlmeUVuYWJsZWQgZmFsc2UKICAgICAgICAgICAgcHJvZ3VhcmRGaWxlcyBnZXREZWZhdWx0UHJvZ3VhcmRGaWxlKCdwcm9ndWFyZC1hbmRyb2lkLnR4dCcpLCAncHJvZ3VhcmQtcnVsZXMucHJvJwogICAgICAgIH0KICAgIH0KfQoKcmVwb3NpdG9yaWVzIHsKICAgIGZsYXREaXJ7CiAgICAgICAgZGlycyAnLi4vY2FwYWNpdG9yLWNvcmRvdmEtYW5kcm9pZC1wbHVnaW5zL3NyYy9tYWluL2xpYnMnLCAnbGlicycKICAgIH0KfQoKZGVwZW5kZW5jaWVzIHsKICAgIGltcGxlbWVudGF0aW9uIGZpbGVUcmVlKGluY2x1ZGU6IFsnKi5qYXInXSwgZGlyOiAnbGlicycpCiAgICBpbXBsZW1lbnRhdGlvbiAiYW5kcm9pZHguYXBwY29tcGF0OmFwcGNvbXBhdDokYW5kcm9pZHhBcHBDb21wYXRWZXJzaW9uIgogICAgaW1wbGVtZW50YXRpb24gImFuZHJvaWR4LmNvb3JkaW5hdG9ybGF5b3V0OmNvb3JkaW5hdG9ybGF5b3V0OiRhbmRyb2lkeENvb3JkaW5hdG9yTGF5b3V0VmVyc2lvbiIKICAgIGltcGxlbWVudGF0aW9uICJhbmRyb2lkeC5jb3JlOmNvcmUtc3BsYXNoc2NyZWVuOiRjb3JlU3BsYXNoU2NyZWVuVmVyc2lvbiIKICAgIGltcGxlbWVudGF0aW9uIHByb2plY3QoJzpjYXBhY2l0b3ItYW5kcm9pZCcpCiAgICB0ZXN0SW1wbGVtZW50YXRpb24gImp1bml0Omp1bml0OiRqdW5pdFZlcnNpb24iCiAgICBhbmRyb2lkVGVzdEltcGxlbWVudGF0aW9uICJhbmRyb2lkeC50ZXN0LmV4dDpqdW5pdDokYW5kcm9pZHhKdW5pdFZlcnNpb24iCiAgICBhbmRyb2lkVGVzdEltcGxlbWVudGF0aW9uICJhbmRyb2lkeC50ZXN0LmVzcHJlc3NvOmVzcHJlc3NvLWNvcmU6JGFuZHJvaWR4RXNwcmVzc29Db3JlVmVyc2lvbiIKICAgIGltcGxlbWVudGF0aW9uIHByb2plY3QoJzpjYXBhY2l0b3ItY29yZG92YS1hbmRyb2lkLXBsdWdpbnMnKQp9CgphcHBseSBmcm9tOiAnY2FwYWNpdG9yLmJ1aWxkLmdyYWRsZScKCnRyeSB7CiAgICBkZWYgc2VydmljZXNKU09OID0gZmlsZSgnZ29vZ2xlLXNlcnZpY2VzLmpzb24nKQogICAgaWYgKHNlcnZpY2VzSlNPTi50ZXh0KSB7CiAgICAgICAgYXBwbHkgcGx1Z2luOiAnY29tLmdvb2dsZS5nbXMuZ29vZ2xlLXNlcnZpY2VzJwogICAgfQp9IGNhdGNoKEV4Y2VwdGlvbiBlKSB7CiAgICBsb2dnZXIuaW5mbygiZ29vZ2xlLXNlcnZpY2VzLmpzb24gbm90IGZvdW5kLCBnb29nbGUtc2VydmljZXMgcGx1Z2luIG5vdCBhcHBsaWVkLiBQdXNoIE5vdGlmaWNhdGlvbnMgd29uJ3Qgd29yayIpCn0K
+apply plugin: 'com.android.application'
+
+// Release signing comes from android/keystore.properties, which the CI
+// workflow writes from GitHub secrets (never committed). Without it the
+// release build is unsigned; debug builds are unaffected.
+//   storeFile, storePassword, keyAlias, keyPassword
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace = "com.wheelgrade.app"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.wheelgrade.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        // versionCode comes from CI (-PwheelgradeVersionCode=<run number>);
+        // versionName stays 1.0 until Jon bumps it.
+        versionCode (project.findProperty('wheelgradeVersionCode') ?: 1) as int
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    signingConfigs {
+        release {
+            // Only applied when keystore.properties exists (CI release
+            // builds). A missing keystore leaves the build unsigned
+            // rather than failing the configuration phase.
+            if (keystorePropertiesFile.exists()) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}
