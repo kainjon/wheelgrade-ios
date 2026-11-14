@@ -42,7 +42,7 @@ jobs:
         # so the AppIcon set, splash, and web/ fallback icons are drawn
         # at build time from scripts/gen_icons.py (Pillow).
         run: |
-          pip3 install --quiet Pillow
+          pip3 install --break-system-packages --quiet Pillow
           python3 scripts/gen_icons.py
 
       - name: Sync Capacitor iOS project
