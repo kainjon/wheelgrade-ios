@@ -1,1 +1,22 @@
-ewogICJuYW1lIjogIndoZWVsZ3JhZGUtaW9zIiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgImRlc2NyaXB0aW9uIjogIiIsCiAgIm1haW4iOiAiaW5kZXguanMiLAogICJzY3JpcHRzIjogewogICAgInRlc3QiOiAiZWNobyBcIkVycm9yOiBubyB0ZXN0IHNwZWNpZmllZFwiICYmIGV4aXQgMSIKICB9LAogICJrZXl3b3JkcyI6IFtdLAogICJhdXRob3IiOiAiIiwKICAibGljZW5zZSI6ICJJU0MiLAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiQGNhcGFjaXRvci9hbmRyb2lkIjogIjguNi4yIiwKICAgICJAY2FwYWNpdG9yL2NsaSI6ICJeOC42LjIiLAogICAgIkBjYXBhY2l0b3IvY29yZSI6ICJeOC42LjIiLAogICAgIkBjYXBhY2l0b3IvaW9zIjogIl44LjYuMiIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQGNhcGFjaXRvci9hc3NldHMiOiAiXjQuMC4wIiwKICAgICJ0eXBlc2NyaXB0IjogIl43LjAuMiIKICB9Cn0K
+{
+  "name": "wheelgrade-ios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/cli": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/ios": "^8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "typescript": "^7.0.2"
+  }
+}
