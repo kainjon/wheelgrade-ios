@@ -1,0 +1,114 @@
+name: Android — Build signed AAB for Google Play
+
+# Manual trigger only: the release AAB is built on demand, and every Play
+# upload needs a fresh versionCode, so builds run on demand, not on push.
+# The AAB is kept as a workflow artifact; uploading it to Play Console is
+# a manual step (see ANDROID.md). The signed release APK is also kept, for
+# sideload testing on a real device.
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: 'What changed in this build (shown in the run)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Set up JDK 21
+        # Capacitor 8 is compiled with --release 21; JDK 17 fails the
+        # build ("invalid source release: 21").
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Set up Gradle 8.14.3
+        # Same version as the Gradle wrapper (gradle-wrapper.properties).
+        # setup-gradle is used instead of ./gradlew because the wrapper
+        # jar is binary and cannot go through the text-only push tool.
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.14.3'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate icons
+        # No PNGs are committed (the GitHub push tool handles text only),
+        # so the Android launcher icons, adaptive-icon foregrounds, and
+        # splash screens are drawn at build time from
+        # scripts/gen_icons.py (Pillow).
+        run: |
+          pip3 install --quiet Pillow
+          python3 scripts/gen_icons.py
+
+      - name: Sync Capacitor Android project
+        # Copies the committed web/ snapshot into
+        # android/app/src/main/assets/public and regenerates the Android
+        # config. web/ is synced from the Worker by ./sync-web.sh before
+        # a release (run locally, then commit).
+        run: npx cap sync android
+
+      - name: Ensure Android SDK 36
+        # Capacitor 8 targets SDK 36. The hosted runner usually ships it;
+        # this is a no-op when it is already installed.
+        run: |
+          SDK="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          echo "y" | "$SDK/cmdline-tools/latest/bin/sdkmanager" \
+            "platforms;android-36" "build-tools;36.0.0"
+
+      - name: Restore upload keystore
+        # The upload keystore is restored from the ANDROID_KEYSTORE_BASE64
+        # secret; its passwords come from ANDROID_KEYSTORE_PASSWORD,
+        # ANDROID_KEY_ALIAS and ANDROID_KEY_PASSWORD. keystore.properties
+        # is gitignored and only exists on the runner.
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_B64" | base64 -d > android/app/upload-keystore.jks
+          printf 'storeFile=upload-keystore.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' \
+            "$STORE_PASSWORD" "$KEY_ALIAS" "$KEY_PASSWORD" \
+            > android/keystore.properties
+          ls -l android/app/upload-keystore.jks android/keystore.properties
+
+      - name: Build signed AAB + APK
+        # versionCode is the run number, so every Play upload is a new
+        # version. versionName stays 1.0 until Jon bumps it in
+        # android/app/build.gradle.
+        run: |
+          cd android && \
+            gradle bundleRelease assembleRelease \
+              -PwheelgradeVersionCode=${{ github.run_number }}
+          ls -lh app/build/outputs/bundle/release/*.aab \
+                 app/build/outputs/apk/release/*.apk
+
+      - name: Keep the AAB as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WheelGrade-AAB-${{ github.run_number }}
+          path: android/app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+
+      - name: Keep the APK as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WheelGrade-APK-${{ github.run_number }}
+          path: android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: warn
