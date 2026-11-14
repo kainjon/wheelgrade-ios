@@ -1,1 +1,163 @@
-IyBXaGVlbEdyYWRlIOKAlCBBbmRyb2lkIHBhY2thZ2luZyAoQ2FwYWNpdG9yICsgR2l0SHViIEFjdGlvbnMpCgpUaGUgR29vZ2xlIFBsYXkgYnVpbGQgb2YgV2hlZWxHcmFkZS4gVGhlIFBXQSBhbG9uZSBjYW4ndCBiZSBzdWJtaXR0ZWQgdG8KR29vZ2xlIFBsYXkg4oCUIGl0IG5lZWRzIGEgbmF0aXZlIHdyYXBwZXIuIFRoaXMgcHJvamVjdCBpcyB0aGF0IHdyYXBwZXIuCgojIyBXaGF0IHdhcyBjaG9zZW4sIGFuZCB3aHkKCnwgT3B0aW9uIHwgVmVyZGljdCB8CnwtLS18LS0tfAp8ICoqQ2FwYWNpdG9yIEFuZHJvaWQqKiB8ICoqQ2hvc2VuLioqIFRoZSBpT1MgYnVpbGQgYWxyZWFkeSB1c2VzIENhcGFjaXRvciA4LCBzbyBBbmRyb2lkIGlzIHRoZSBzYW1lIHByb2plY3QsIHNhbWUgYGNhcGFjaXRvci5jb25maWcudHNgLCBzYW1lIGB3ZWIvYCBzbmFwc2hvdCwgc2FtZSBsaXZlLVVSTCBob3N0ZWQgcGF0dGVybiwgYW5kIHRoZSBzYW1lIEdpdEh1YiBBY3Rpb25zIHN0eWxlLiBPbmUgcmVwbywgb25lIGBucG0gY2lgLCB0d28gcGxhdGZvcm1zLiB8CnwgKipUV0EgLyBCdWJibGV3cmFwKiogfCBSZWplY3RlZC4gQSBUcnVzdGVkIFdlYiBBY3Rpdml0eSB3b3VsZCBiZSBhIHNlY29uZCwgc2VwYXJhdGUgcHJvamVjdCAoQnViYmxld3JhcCBjb25maWcsIGl0cyBvd24gbWFuaWZlc3QgaGFuZGxpbmcsIGl0cyBvd24gc2lnbmluZykgd2l0aCBubyBzaGFyZWQgY29kZSBvciB0b29saW5nIHdpdGggdGhlIGlPUyBidWlsZCwgYW5kIGl0IHN0aWxsIG5lZWRzIGEgc2lnbmluZyBrZXlzdG9yZSBhbmQgYSBDSSBidWlsZCBmb3IgdGhlIEFBQi4gSXQgYnV5cyBub3RoaW5nIG92ZXIgQ2FwYWNpdG9yIGhlcmUsIGFuZCBpdCB3b3VsZCBkcmlmdCBmcm9tIHRoZSBpT1Mgd3JhcHBlci4gfAp8ICoqUFdBQnVpbGRlciBBbmRyb2lkKiogfCBSZWplY3RlZC4gSXQgd3JhcHMgdGhlIFBXQSBpbiBhIFRXQSB0aGUgc2FtZSB3YXkgQnViYmxld3JhcCBkb2VzLCBhbmQgaXQgZG9lcyBub3QgcHJvZHVjZSBhIHNpZ25lZCwgc3RvcmUtcmVhZHkgQUFCIGJ5IGl0c2VsZi4gfAoKIyMgSG93IHRoZSBhcHAgd29ya3MKCi0gKipQYWNrYWdlOioqIGBjb20ud2hlZWxncmFkZS5hcHBgIChzYW1lIGFzIGlPUyBidW5kbGUgSUQpLgotICoqVGhlIGFwcCBsb2FkcyB0aGUgTElWRSBzaXRlKiogKGBzZXJ2ZXIudXJsOiBodHRwczovL3doZWVsZ3JhZGUuY29tL2FwcC9gKS4KICBXZWIgZGVwbG95cyB2aWEgdGhlIENsb3VkZmxhcmUgV29ya2VyIGdvIGxpdmUgaW4gdGhlIEFuZHJvaWQgYXBwCiAgaW1tZWRpYXRlbHkg4oCUIG5vIFBsYXkgcmVzdWJtaXNzaW9uIGZvciB3ZWIgY2hhbmdlcy4gVGhlIGJ1bmRsZWQgYHdlYi9gCiAgc25hcHNob3QgaXMgYSBmYWxsYmFjayBvbmx5LiBUaGlzIGlzIHRoZSBzYW1lIGhvc3RlZC1hcHAgcGF0dGVybiBhcyBpT1MuCi0gKipObyBuYXRpdmUgcGx1Z2lucy4qKiBUaGUgd2ViIGFwcCBuZWVkcyBvbmx5IGxvY2FsU3RvcmFnZSwgZmV0Y2gsIGFuZAogIHRoZSBzZXJ2aWNlIHdvcmtlciDigJQgYWxsIHdvcmsgaW4gdGhlIEFuZHJvaWQgV2ViVmlldy4gTm90aGluZyB0byBhZGQuCi0gKipNaW4gU0RLIDI0KiogKEFuZHJvaWQgNy4wKSwgKip0YXJnZXQvY29tcGlsZSBTREsgMzYqKi4gQnVpbHQgd2l0aAogICoqSkRLIDIxKiogKENhcGFjaXRvciA4IGlzIGNvbXBpbGVkIHdpdGggYC0tcmVsZWFzZSAyMWA7IEpESyAxNyBmYWlscwogIHRoZSBidWlsZCkgYW5kIEdyYWRsZSA4LjE0LjMgLyBBR1AgOC4xMy4wLgotICoqVmVyc2lvbmluZzoqKiBgdmVyc2lvbk5hbWVgIGlzIGAxLjBgIHVudGlsIEpvbiBidW1wcyBpdCBpbgogIGBhbmRyb2lkL2FwcC9idWlsZC5ncmFkbGVgLiBgdmVyc2lvbkNvZGVgIGlzIHNldCBieSBDSSBmcm9tIHRoZSBHaXRIdWIKICBydW4gbnVtYmVyLCBzbyBldmVyeSBQbGF5IHVwbG9hZCBpcyBhIG5ldyB2ZXJzaW9uLgotICoqSWNvbnM6KiogZnVsbCBsYXVuY2hlciBzZXQgKGxlZ2FjeSArIHJvdW5kICsgYWRhcHRpdmUgZm9yZWdyb3VuZCBhdAogIG1kcGnigJN4eHhoZHBpKSBhbmQgcG9ydHJhaXQvbGFuZHNjYXBlIHNwbGFzaCBzY3JlZW5zIGFyZSAqKmdlbmVyYXRlZCBhdAogIGJ1aWxkIHRpbWUqKiBieSBgc2NyaXB0cy9nZW5faWNvbnMucHlgIChQaWxsb3cpIOKAlCBubyBQTkdzIGFyZSBjb21taXR0ZWQuCiAgVGhlIGxvZ28gaXMgdGhlIGJsYWNrICsgYnJpZ2h0LWdyZWVuLVcgbWFyaywgZHJhd24gZnJvbSB0aGUgc2FtZSB2ZWN0b3IKICBjb29yZGluYXRlcyBhcyB0aGUgc2hpcHBlZCBQV0EgaWNvbiBhbmQgdGhlIGlPUyBBcHBJY29uIHNldC4KCiMjIFdoYXQncyBpbiB0aGlzIHByb2plY3QKCnwgUGF0aCB8IFdoYXQgaXQgaXMgfAp8LS0tfC0tLXwKfCBgY2FwYWNpdG9yLmNvbmZpZy50c2AgfCBBcHAgSUQsIG5hbWUsIGB3ZWJEaXI6IHdlYmAsIGBzZXJ2ZXIudXJsYCDihpIgbGl2ZSBzaXRlIChzaGFyZWQgd2l0aCBpT1MpIHwKfCBgYW5kcm9pZC9gIHwgVGhlIEFuZHJvaWQgcHJvamVjdCAoYGFuZHJvaWQvYXBwYCwgR3JhZGxlIHdyYXBwZXIsIGB2YXJpYWJsZXMuZ3JhZGxlYCkuIEdlbmVyYXRlZCBieSBgbnB4IGNhcCBhZGQgYW5kcm9pZGAsIGNvbW1pdHRlZC4gVGhlIGNvcGllZCBgd2ViL2AgaW5zaWRlIGl0IGFuZCBnZW5lcmF0ZWQgY29uZmlnIGFyZSBnaXRpZ25vcmVkIOKAlCBgY2FwIHN5bmNgIHJlYnVpbGRzIHRoZW0uIHwKfCBgYW5kcm9pZC9hcHAvYnVpbGQuZ3JhZGxlYCB8IEFwcCBtb2R1bGU6IHNpZ25pbmcgY29uZmlnIHJlYWRzIGBhbmRyb2lkL2tleXN0b3JlLnByb3BlcnRpZXNgIChDSS13cml0dGVuLCBnaXRpZ25vcmVkKTsgYHZlcnNpb25Db2RlYCBmcm9tIGAtUHdoZWVsZ3JhZGVWZXJzaW9uQ29kZWAuIHwKfCBgc2NyaXB0cy9nZW5faWNvbnMucHlgIHwgRHJhd3MgdGhlIEFuZHJvaWQgbGF1bmNoZXIgaWNvbnMsIGFkYXB0aXZlIGZvcmVncm91bmRzLCBhbmQgc3BsYXNoIHNjcmVlbnMgZnJvbSB0aGUgdmVjdG9yIGxvZ28gKFBpbGxvdyk7IHJ1biBieSB0aGUgd29ya2Zsb3cgYmVmb3JlIGBjYXAgc3luY2AuIEFsc28gZHJhd3MgdGhlIGlPUyBpY29ucy4gfAp8IGAuZ2l0aHViL3dvcmtmbG93cy9hbmRyb2lkLXBsYXkueW1sYCB8IFRoZSBjbG91ZCBidWlsZDogVWJ1bnR1IHJ1bm5lciDihpIgSkRLIDIxIOKGkiBpY29ucyDihpIgYGNhcCBzeW5jIGFuZHJvaWRgIOKGkiBzaWduZWQgQUFCICsgQVBLIOKGkiBhcnRpZmFjdHMuIE1hbnVhbCB0cmlnZ2VyIG9ubHkuIHwKfCBgc3luYy13ZWIuc2hgIHwgQ29waWVzIGB+L3dvcmtzcGFjZS93aGVlbGdyYWRlLWNsb3VkZmxhcmUvcHVibGljL2Ag4oaSIGB3ZWIvYC4gUnVuIGJlZm9yZSBhIHJlbGVhc2UsIHRoZW4gY29tbWl0LiAoU2hhcmVkIHdpdGggaU9TLikgfAp8IGBBTkRST0lELm1kYCB8IFRoaXMgZmlsZS4gfAoKTm90ZTogYGFuZHJvaWQvZ3JhZGxlL3dyYXBwZXIvZ3JhZGxlLXdyYXBwZXIuamFyYCBpcyBhIGJpbmFyeSBmaWxlIGFuZCBpcwoqKm5vdCoqIGNvbW1pdHRlZCAodGhlIHB1c2ggdG9vbCBoYW5kbGVzIHRleHQgb25seSkuIFRoZSB3b3JrZmxvdyBkb2VzIG5vdApuZWVkIGl0IOKAlCBpdCBpbnN0YWxscyBHcmFkbGUgOC4xNC4zIHdpdGggYGdyYWRsZS9hY3Rpb25zL3NldHVwLWdyYWRsZWAKKHRoZSBzYW1lIHZlcnNpb24gdGhlIHdyYXBwZXIgcGlucykgYW5kIHJ1bnMgYGdyYWRsZWAgZGlyZWN0bHkuIExvY2FsCmAuL2dyYWRsZXdgIHVzZSBzdGlsbCBuZWVkcyB0aGUgamFyOyBpdCBpcyBwcmVzZW50IGluIHRoaXMgd29ya2luZyBjb3B5LgoKIyMgUmVwbyBkZWNpc2lvbgoKQW5kcm9pZCBsaXZlcyBpbiB0aGUgKipzYW1lIHJlcG8gYXMgaU9TKiogKGBrYWluam9uL3doZWVsZ3JhZGUtaW9zYCksCm5vdCBhIHNlcGFyYXRlIGB3aGVlbGdyYWRlLWFuZHJvaWRgIHJlcG8uIE9uZSBDYXBhY2l0b3IgcHJvamVjdCwgb25lCmB3ZWIvYCBzbmFwc2hvdCwgb25lIGBucG0gY2lgLCBubyBkdXBsaWNhdGVkIGNvbmZpZyB0byBrZWVwIGluIHN5bmMsIGFuZApubyBuZXcgcmVwbyBmb3IgdGhlIEdpdEh1YiBBcHAgdG8gYmUgZ3JhbnRlZCBhY2Nlc3MgdG8uIFRoZSByZXBvIG5hbWUgaXMKbm93IGEgbWlsZCBtaXNub21lciAoaXQgaG9sZHMgYm90aCBwbGF0Zm9ybXMpOyByZW5hbWluZyBpdCB0bwpgd2hlZWxncmFkZS1tb2JpbGVgIGlzIG9wdGlvbmFsIGFuZCBzYWZlIChHaXRIdWIgcmVkaXJlY3RzIHRoZSBvbGQgVVJMKSwKYnV0IGl0IGlzIG5vdCByZXF1aXJlZCBmb3IgYW55dGhpbmcgdG8gd29yay4KCiMjIFNlY3JldHMgSm9uIG11c3QgYWRkIChHaXRIdWIgcmVwbyDihpIgU2V0dGluZ3Mg4oaSIFNlY3JldHMgYW5kIHZhcmlhYmxlcyDihpIgQWN0aW9ucykKCkZvdXIgc2VjcmV0cy4gQWxsIGZvdXIgYXJlIHJlcXVpcmVkIGJlZm9yZSB0aGUgZmlyc3Qgd29ya2Zsb3cgcnVuLgoKfCBTZWNyZXQgfCBWYWx1ZSB8IFdoZXJlIGl0IGNvbWVzIGZyb20gfAp8LS0tfC0tLXwtLS18CnwgYEFORFJPSURfS0VZU1RPUkVfQkFTRTY0YCB8IGJhc2U2NCBvZiBgd2hlZWxncmFkZS11cGxvYWQua2V5c3RvcmVgIHwgVGhlIGtleXN0b3JlIGZpbGUgaW4gYH4vd29ya3NwYWNlL3doZWVsZ3JhZGUtdXBsb2FkLWtleXN0b3JlL2AuIEJhc2U2NC1lbmNvZGUgaXQ6IGBiYXNlNjQgLXcwIHdoZWVsZ3JhZGUtdXBsb2FkLmtleXN0b3JlYCBhbmQgcGFzdGUgdGhlIHdob2xlIHNpbmdsZSBsaW5lLiB8CnwgYEFORFJPSURfS0VZU1RPUkVfUEFTU1dPUkRgIHwgdGhlIGtleXN0b3JlIHBhc3N3b3JkIHwgYEtFWVNUT1JFLVBBU1NXT1JELnR4dGAgaW4gdGhlIHNhbWUgZGlyZWN0b3J5LiBIYW5kZWQgdG8gSm9uIG9uY2UsIHNlY3VyZWx5OyBKb24gc2F2ZXMgaXQgaW4gaGlzIHBhc3N3b3JkIG1hbmFnZXIuIHwKfCBgQU5EUk9JRF9LRVlfQUxJQVNgIHwgYHdoZWVsZ3JhZGVgIHwgVGhlIGtleSBhbGlhcyBpbiB0aGUga2V5c3RvcmUuIHwKfCBgQU5EUk9JRF9LRVlfUEFTU1dPUkRgIHwgc2FtZSBhcyB0aGUga2V5c3RvcmUgcGFzc3dvcmQgfCBUaGUga2V5IHBhc3N3b3JkIChzYW1lIHZhbHVlIGFzIHRoZSBrZXlzdG9yZSBwYXNzd29yZCkuIHwKCioqVGhlIGtleXN0b3JlIGl0c2VsZioqIChgd2hlZWxncmFkZS11cGxvYWQua2V5c3RvcmVgKSBpcyBhdApgfi93b3Jrc3BhY2Uvd2hlZWxncmFkZS11cGxvYWQta2V5c3RvcmUvYCBvbiB0aGUgYnVpbGQgbWFjaGluZS4gSXQgaXMKTkVWRVIgY29tbWl0dGVkIHRvIHRoZSByZXBvIChgLmdpdGlnbm9yZWAgYmxvY2tzIGAqLmprc2AsIGAqLmtleXN0b3JlYCwKYGtleXN0b3JlLnByb3BlcnRpZXNgKS4gSm9uIG11c3QgYmFjayBpdCB1cCBzb21ld2hlcmUgc2FmZSAocGFzc3dvcmQKbWFuYWdlciBhdHRhY2htZW50IG9yIGVuY3J5cHRlZCBiYWNrdXApLiBJZiBpdCBpcyBsb3N0IGFmdGVyIHRoZSBmaXJzdApQbGF5IHVwbG9hZCwgdGhlIHVwbG9hZCBrZXkgaGFzIHRvIGJlIHJlc2V0IHRocm91Z2ggUGxheSBDb25zb2xlIHN1cHBvcnQuCgojIyBIb3cgdG8gcnVuIGEgYnVpbGQKCjEuIEdpdEh1YiByZXBvIOKGkiAqKkFjdGlvbnMqKiDihpIgKipBbmRyb2lkIOKAlCBCdWlsZCBzaWduZWQgQUFCIGZvciBHb29nbGUgUGxheSoqIOKGkiAqKlJ1biB3b3JrZmxvdyoqIOKGkiAqKlJ1biB3b3JrZmxvdyoqLgoyLiBJdCBwaWNrcyBVYnVudHUsIGluc3RhbGxzIE5vZGUgMjIgKyBKREsgMjEsIHJ1bnMgYG5wbSBjaWAsIGdlbmVyYXRlcwogICB0aGUgaWNvbnMsIHJ1bnMgYG5weCBjYXAgc3luYyBhbmRyb2lkYCwgcmVzdG9yZXMgdGhlIGtleXN0b3JlIGZyb20KICAgc2VjcmV0cywgYW5kIHJ1bnMgYC4vZ3JhZGxldyBidW5kbGVSZWxlYXNlIGFzc2VtYmxlUmVsZWFzZWAuCjMuIFdoZW4gaXQgZmluaXNoZXMsIHR3byBhcnRpZmFjdHMgYXJlIGtlcHQ6CiAgIC0gKipXaGVlbEdyYWRlLUFBQi1OKiog4oCUIGBhcHAtcmVsZWFzZS5hYWJgLCB0aGUgZmlsZSB0byB1cGxvYWQgdG8gUGxheSBDb25zb2xlLgogICAtICoqV2hlZWxHcmFkZS1BUEstTioqIOKAlCBgYXBwLXJlbGVhc2UuYXBrYCwgc2lnbmVkLCBmb3Igc2lkZWxvYWQgdGVzdGluZyBvbiBhIHJlYWwgQW5kcm9pZCBkZXZpY2UuCjQuIElmIGEgc3RlcCBmYWlscywgdGhlIGVycm9yIHNheXMgd2hpY2ggb25lLiBDb21tb24gZmlyc3QtcnVuIGZhaWx1cmVzOgogICAtIEEgc2VjcmV0IGlzIG1pc3Npbmcgb3IgbWlzdHlwZWQg4oaSIHRoZSAiUmVzdG9yZSB1cGxvYWQga2V5c3RvcmUiCiAgICAgb3IgdGhlIEdyYWRsZSBzaWduaW5nIHN0ZXAgZmFpbHMuIFJlLWNoZWNrIHRoZSBmb3VyIHNlY3JldCBuYW1lcy4KICAgLSBUaGUga2V5c3RvcmUgYmFzZTY0IGlzIHdyYXBwZWQgb3IgdHJ1bmNhdGVkIOKGkiBkZWNvZGUgZmFpbHMuIFRoZQogICAgIHNlY3JldCBtdXN0IGJlIG9uZSBzaW5nbGUgbGluZSAodXNlIGBiYXNlNjQgLXcwYCkuCgojIyBVcGxvYWRpbmcgdG8gUGxheSBDb25zb2xlIChtYW51YWwpCgoxLiBQbGF5IENvbnNvbGUg4oaSICoqQ3JlYXRlIGFwcCoqIChmaXJzdCB0aW1lIG9ubHkpOiBuYW1lIFdoZWVsR3JhZGUsCiAgIGRlZmF1bHQgbGFuZ3VhZ2UgRW5nbGlzaCAoVW5pdGVkIFN0YXRlcyksIGFwcCBvciBnYW1lOiBBcHAsIGZyZWUgb3IKICAgcGFpZDogKipQYWlkKiogKHRoZSAkOS45OSBvbmUtdGltZSBwcmljZSBpcyBzZXQgaW4gdGhlIGxpc3RpbmcsIHVuZGVyCiAgICoqTW9uZXRpemUg4oaSIEFwcCBwcmljaW5nKiog4oCUIHNlZSBiZWxvdykuCjIuIEluIHRoZSBhcHA6ICoqVGVzdCBhbmQgcmVsZWFzZSDihpIgUHJvZHVjdGlvbiDihpIgQ3JlYXRlIG5ldyByZWxlYXNlKiosCiAgIHVwbG9hZCB0aGUgYGFwcC1yZWxlYXNlLmFhYmAgZnJvbSB0aGUgd29ya2Zsb3cgYXJ0aWZhY3QuCjMuIENvbXBsZXRlIHRoZSBsaXN0aW5nOiBhcHAgaWNvbiAodXNlIGBhc3NldHMvaWNvbi5wbmdgLCB0aGUgMTAyNAogICBtYXN0ZXIpLCBmZWF0dXJlIGdyYXBoaWMsIHNjcmVlbnNob3RzIChwaG9uZSArIDciIHRhYmxldCArIDEwIiB0YWJsZXQKICAgYXJlIHJlcXVpcmVkIGZvciB0aGUgbGlzdGluZyksIHNob3J0ICsgZnVsbCBkZXNjcmlwdGlvbiwgY2F0ZWdvcnksCiAgIGNvbnRhY3QgZW1haWwgYHN1cHBvcnRAd2hlZWxncmFkZS5jb21gLCBwcml2YWN5IHBvbGljeSBVUkwKICAgYGh0dHBzOi8vd2hlZWxncmFkZS5jb20vcHJpdmFjeS5odG1sYC4KNC4gKipQcmljaW5nOioqIHNldCB0aGUgcHJpY2UgdG8gKiokOS45OSoqIHVuZGVyIE1vbmV0aXplIOKGkiBBcHAgcHJpY2luZy4KICAgR29vZ2xlIGtlZXBzIDE1JSBvbiB0aGUgZmlyc3QgJDFNL3llYXIgKHNtYWxsLWRldmVsb3BlciB0aWVyKS4KNS4gU3VibWl0IGZvciByZXZpZXcuIEZpcnN0IHJldmlldyB0eXBpY2FsbHkgdGFrZXMgYSBmZXcgZGF5cy4KCk5vdGVzOgotICoqUGxheSBBcHAgU2lnbmluZyBpcyBtYW5kYXRvcnkqKiBmb3IgbmV3IGFwcHM6IEdvb2dsZSByZS1zaWducyB0aGUKICBBQUIgd2l0aCBpdHMgb3duIGFwcC1zaWduaW5nIGtleS4gVGhlIGtleXN0b3JlIGluIHRoaXMgcHJvamVjdCBpcyB0aGUKICAqdXBsb2FkKiBrZXkgb25seS4KLSAqKkFBQiBpcyByZXF1aXJlZCoqIOKAlCBHb29nbGUgUGxheSBubyBsb25nZXIgYWNjZXB0cyBBUEsgdXBsb2FkcyBmb3IgbmV3IGFwcHMuCi0gKipQaG9uZSB2ZXJpZmljYXRpb24qKiBpbiBQbGF5IENvbnNvbGUgYW5kIHRoZSAqKkFuZHJvaWQtZGV2aWNlCiAgdmVyaWZpY2F0aW9uKiogKHNpZ24gaW50byB0aGUgUGxheSBDb25zb2xlIGFwcCBvbiBhIHJlYWwgQW5kcm9pZAogIGRldmljZSkgbXVzdCBiZSBkb25lIGJlZm9yZSB0aGUgZmlyc3QgcmVsZWFzZS4gSm9uIGhhcyBubyBBbmRyb2lkCiAgZGV2aWNlOyBib3Jyb3cgb25lIGJyaWVmbHkgZm9yIHRoZSB2ZXJpZmljYXRpb24gc3RlcC4KLSAqKklkZW50aXR5IHZlcmlmaWNhdGlvbioqIGluIFBsYXkgQ29uc29sZSB3YXMgc3RpbGwgcnVubmluZyB3aGVuIHRoaXMKICB3YXMgd3JpdHRlbjsgaXQgbXVzdCBjb21wbGV0ZSBiZWZvcmUgcHVibGlzaGluZy4KCiMjIEFmdGVyIHRoZSBQbGF5IGxpc3RpbmcgZ29lcyBsaXZlCgpUaGUgbGFuZGluZyBwYWdlIGluc3RhbGwgYnV0dG9uIGlzIHN0b3JlLWF3YXJlLiBJbgpgfi93b3Jrc3BhY2Uvd2hlZWxncmFkZS1kZXBsb3kvaW5kZXguaHRtbGAgdGhlcmUgYXJlIGBBUFBfU1RPUkVfVVJMYCBhbmQKYFBMQVlfU1RPUkVfVVJMYCBjb25zdGFudHMgKGJvdGggZW1wdHkgZm9yIG5vdykuIFBhc3RlIHRoZSBQbGF5IHN0b3JlCmxpc3RpbmcgVVJMIGludG8gYFBMQVlfU1RPUkVfVVJMYCBhbmQgcHVzaCB0aGUgbGFuZGluZyByZXBvIOKAlCB0aGUgYnV0dG9uCnRoZW4gYmVjb21lcyAiR2V0IGl0IG9uIEdvb2dsZSBQbGF5IiBhbmQgcm91dGVzIHN0cmFpZ2h0IHRvIHRoZSBzdG9yZS4KU2FtZSBmb3IgYEFQUF9TVE9SRV9VUkxgIHdoZW4gdGhlIGlPUyBsaXN0aW5nIGdvZXMgbGl2ZS4KCiMjIFRoZSBvbmUgdGhpbmcgdGhhdCB3aWxsIGxpa2VseSBibG9jayBQbGF5IHJldmlldzogbm90aGluZyBzcGVjaWFsCgpVbmxpa2UgQXBwbGUsIEdvb2dsZSBQbGF5IGhhcyBubyBydWxlIGFnYWluc3QgYW4gZXh0ZXJuYWwgcGF5bWVudCBsaW5rCmZvciBhIHBhaWQgYXBwIOKAlCBXaGVlbEdyYWRlIGlzIGEgKipwYWlkIGFwcCoqICgkOS45OSB1cGZyb250KSwgbm90IGFuCmluLWFwcCBwdXJjaGFzZSwgc28gdGhlcmUgaXMgbm8gU3RyaXBlLXZzLUlBUCBjb25mbGljdCBvbiBBbmRyb2lkLiBUaGUKd2ViIFN0cmlwZSBjaGVja291dCBpcyBvbmx5IHVzZWQgb24gdGhlIHdlYnNpdGUsIG5vdCBpbnNpZGUgdGhlIEFuZHJvaWQKYXBwLiBUaGUgQW5kcm9pZCBhcHAgaXRzZWxmIGp1c3QgbG9hZHMgdGhlIGxpdmUgc2l0ZSwgd2hpY2ggaXMgdGhlIHNhbWUKY29udGVudCBhIGJyb3dzZXIgc2hvd3MuCgojIyBVcGRhdGluZyB0aGUgYXBwIGxhdGVyCgotICoqV2ViIGNoYW5nZXMqKiAoQW5hbHl6ZXIsIEJvYXJkLCBjb3B5LCBncmFkZXMpOiBkZXBsb3kgdGhlIFdvcmtlciBhcwogIHVzdWFsLiBUaGUgQW5kcm9pZCBhcHAgbG9hZHMgdGhlIGxpdmUgc2l0ZSDigJQgbm8gcmVidWlsZCwgbm8KICByZXN1Ym1pc3Npb24uCi0gKipOYXRpdmUgY2hhbmdlcyoqIChpY29uLCBzcGxhc2gsIHBhY2thZ2UgSUQsIENhcGFjaXRvciB2ZXJzaW9uKToKICBlZGl0IGhlcmUsIHJ1biBgLi9zeW5jLXdlYi5zaGAgaWYgdGhlIHdlYiBzbmFwc2hvdCBjaGFuZ2VkLCBjb21taXQsCiAgYW5kIHJlLXJ1biB0aGUgd29ya2Zsb3cuIEEgbmV3IEFBQiBnb2VzIG91dDsgdXBsb2FkIGl0IHRvIFBsYXkgQ29uc29sZQogIGFzIGEgbmV3IHByb2R1Y3Rpb24gcmVsZWFzZS4KLSAqKlZlcnNpb24gYnVtcHM6KiogYnVtcCBgdmVyc2lvbk5hbWVgIGluIGBhbmRyb2lkL2FwcC9idWlsZC5ncmFkbGVgCiAgd2hlbiBKb24gd2FudHMgYSBuZXcgbWFya2V0aW5nIHZlcnNpb24gKGUuZy4gYDEuMWApLiBgdmVyc2lvbkNvZGVgIGlzCiAgYXV0b21hdGljIChydW4gbnVtYmVyKS4KCiMjIFN0YXR1cwoKLSDinIUgQ2FwYWNpdG9yIEFuZHJvaWQgcGxhdGZvcm0gYWRkZWQgKENhcGFjaXRvciA4LjYuMiwgU0RLIDM2LCBKREsgMjEpCi0g4pyFIExhdW5jaGVyIGljb25zICsgc3BsYXNoIGdlbmVyYXRlZCBmcm9tIHRoZSBPcHRpb24gQiB2ZWN0b3IKLSDinIUgR2l0SHViIEFjdGlvbnMgd29ya2Zsb3cgd3JpdHRlbiAobm90IHlldCBydW4g4oCUIG5lZWRzIHRoZSA0IHNlY3JldHMpCi0g4pyFIFVwbG9hZCBrZXlzdG9yZSBnZW5lcmF0ZWQgKFBLQ1MxMiwgUlNBIDIwNDgsIHZhbGlkIHRvIDIwNTQpCi0g4o+zIE5lZWRzIEpvbjogNCBHaXRIdWIgc2VjcmV0cywgUGxheSBDb25zb2xlIGFwcCBjcmVhdGlvbiArIGxpc3RpbmcsICQ5Ljk5IHByaWNpbmcsIHBob25lICsgQW5kcm9pZC1kZXZpY2UgdmVyaWZpY2F0aW9uCi0g4o+zIE5vdCBzdGFydGVkOiBmaXJzdCB3b3JrZmxvdyBydW4sIGZpcnN0IEFBQiB1cGxvYWQsIFBsYXkgcmV2aWV3Cg==
+# WheelGrade — Android packaging (Capacitor + GitHub Actions)
+
+The Google Play build of WheelGrade. The PWA alone can't be submitted to
+Google Play — it needs a native wrapper. This project is that wrapper.
+
+## What was chosen, and why
+
+| Option | Verdict |
+|---|---|
+| **Capacitor Android** | **Chosen.** The iOS build already uses Capacitor 8, so Android is the same project, same `capacitor.config.ts`, same `web/` snapshot, same live-URL hosted pattern, and the same GitHub Actions style. One repo, one `npm ci`, two platforms. |
+| **TWA / Bubblewrap** | Rejected. A Trusted Web Activity would be a second, separate project (Bubblewrap config, its own manifest handling, its own signing) with no shared code or tooling with the iOS build, and it still needs a signing keystore and a CI build for the AAB. It buys nothing over Capacitor here, and it would drift from the iOS wrapper. |
+| **PWABuilder Android** | Rejected. It wraps the PWA in a TWA the same way Bubblewrap does, and it does not produce a signed, store-ready AAB by itself. |
+
+## How the app works
+
+- **Package:** `com.wheelgrade.app` (same as iOS bundle ID).
+- **The app loads the LIVE site** (`server.url: https://wheelgrade.com/app/`).
+  Web deploys via the Cloudflare Worker go live in the Android app
+  immediately — no Play resubmission for web changes. The bundled `web/`
+  snapshot is a fallback only. This is the same hosted-app pattern as iOS.
+- **No native plugins.** The web app needs only localStorage, fetch, and
+  the service worker — all work in the Android WebView. Nothing to add.
+- **Min SDK 24** (Android 7.0), **target/compile SDK 36**. Built with
+  **JDK 21** (Capacitor 8 is compiled with `--release 21`; JDK 17 fails
+  the build) and Gradle 8.14.3 / AGP 8.13.0.
+- **Versioning:** `versionName` is `1.0` until Jon bumps it in
+  `android/app/build.gradle`. `versionCode` is set by CI from the GitHub
+  run number, so every Play upload is a new version.
+- **Icons:** full launcher set (legacy + round + adaptive foreground at
+  mdpi–xxxhdpi) and portrait/landscape splash screens are **generated at
+  build time** by `scripts/gen_icons.py` (Pillow) — no PNGs are committed.
+  The logo is the black + bright-green-W mark, drawn from the same vector
+  coordinates as the shipped PWA icon and the iOS AppIcon set.
+
+## What's in this project
+
+| Path | What it is |
+|---|---|
+| `capacitor.config.ts` | App ID, name, `webDir: web`, `server.url` → live site (shared with iOS) |
+| `android/` | The Android project (`android/app`, Gradle wrapper, `variables.gradle`). Generated by `npx cap add android`, committed. The copied `web/` inside it and generated config are gitignored — `cap sync` rebuilds them. |
+| `android/app/build.gradle` | App module: signing config reads `android/keystore.properties` (CI-written, gitignored); `versionCode` from `-PwheelgradeVersionCode`. |
+| `scripts/gen_icons.py` | Draws the Android launcher icons, adaptive foregrounds, and splash screens from the vector logo (Pillow); run by the workflow before `cap sync`. Also draws the iOS icons. |
+| `.github/workflows/android-play.yml` | The cloud build: Ubuntu runner → JDK 21 → icons → `cap sync android` → signed AAB + APK → artifacts. Manual trigger only. |
+| `sync-web.sh` | Copies `~/workspace/wheelgrade-cloudflare/public/` → `web/`. Run before a release, then commit. (Shared with iOS.) |
+| `ANDROID.md` | This file. |
+
+Note: `android/gradle/wrapper/gradle-wrapper.jar` is a binary file and is
+**not** committed (the push tool handles text only). The workflow does not
+need it — it installs Gradle 8.14.3 with `gradle/actions/setup-gradle`
+(the same version the wrapper pins) and runs `gradle` directly. Local
+`./gradlew` use still needs the jar; it is present in this working copy.
+
+## Repo decision
+
+Android lives in the **same repo as iOS** (`kainjon/wheelgrade-ios`),
+not a separate `wheelgrade-android` repo. One Capacitor project, one
+`web/` snapshot, one `npm ci`, no duplicated config to keep in sync, and
+no new repo for the GitHub App to be granted access to. The repo name is
+now a mild misnomer (it holds both platforms); renaming it to
+`wheelgrade-mobile` is optional and safe (GitHub redirects the old URL),
+but it is not required for anything to work.
+
+## Secrets Jon must add (GitHub repo → Settings → Secrets and variables → Actions)
+
+Four secrets. All four are required before the first workflow run.
+
+| Secret | Value | Where it comes from |
+|---|---|---|
+| `ANDROID_KEYSTORE_BASE64` | base64 of `wheelgrade-upload.keystore` | The keystore file in `~/workspace/wheelgrade-upload-keystore/`. Base64-encode it: `base64 -w0 wheelgrade-upload.keystore` and paste the whole single line. |
+| `ANDROID_KEYSTORE_PASSWORD` | the keystore password | `KEYSTORE-PASSWORD.txt` in the same directory. Handed to Jon once, securely; Jon saves it in his password manager. |
+| `ANDROID_KEY_ALIAS` | `wheelgrade` | The key alias in the keystore. |
+| `ANDROID_KEY_PASSWORD` | same as the keystore password | The key password (same value as the keystore password). |
+
+**The keystore itself** (`wheelgrade-upload.keystore`) is at
+`~/workspace/wheelgrade-upload-keystore/` on the build machine. It is
+NEVER committed to the repo (`.gitignore` blocks `*.jks`, `*.keystore`,
+`keystore.properties`). Jon must back it up somewhere safe (password
+manager attachment or encrypted backup). If it is lost after the first
+Play upload, the upload key has to be reset through Play Console support.
+
+## How to run a build
+
+1. GitHub repo → **Actions** → **Android — Build signed AAB for Google Play** → **Run workflow** → **Run workflow**.
+2. It picks Ubuntu, installs Node 22 + JDK 21, runs `npm ci`, generates
+   the icons, runs `npx cap sync android`, restores the keystore from
+   secrets, and runs `./gradlew bundleRelease assembleRelease`.
+3. When it finishes, two artifacts are kept:
+   - **WheelGrade-AAB-N** — `app-release.aab`, the file to upload to Play Console.
+   - **WheelGrade-APK-N** — `app-release.apk`, signed, for sideload testing on a real Android device.
+4. If a step fails, the error says which one. Common first-run failures:
+   - A secret is missing or mistyped → the "Restore upload keystore"
+     or the Gradle signing step fails. Re-check the four secret names.
+   - The keystore base64 is wrapped or truncated → decode fails. The
+     secret must be one single line (use `base64 -w0`).
+
+## Uploading to Play Console (manual)
+
+1. Play Console → **Create app** (first time only): name WheelGrade,
+   default language English (United States), app or game: App, free or
+   paid: **Paid** (the $9.99 one-time price is set in the listing, under
+   **Monetize → App pricing** — see below).
+2. In the app: **Test and release → Production → Create new release**,
+   upload the `app-release.aab` from the workflow artifact.
+3. Complete the listing: app icon (use `assets/icon.png`, the 1024
+   master), feature graphic, screenshots (phone + 7" tablet + 10" tablet
+   are required for the listing), short + full description, category,
+   contact email `support@wheelgrade.com`, privacy policy URL
+   `https://wheelgrade.com/privacy.html`.
+4. **Pricing:** set the price to **$9.99** under Monetize → App pricing.
+   Google keeps 15% on the first $1M/year (small-developer tier).
+5. Submit for review. First review typically takes a few days.
+
+Notes:
+- **Play App Signing is mandatory** for new apps: Google re-signs the
+  AAB with its own app-signing key. The keystore in this project is the
+  *upload* key only.
+- **AAB is required** — Google Play no longer accepts APK uploads for new apps.
+- **Phone verification** in Play Console and the **Android-device
+  verification** (sign into the Play Console app on a real Android
+  device) must be done before the first release. Jon has no Android
+  device; borrow one briefly for the verification step.
+- **Identity verification** in Play Console was still running when this
+  was written; it must complete before publishing.
+
+## After the Play listing goes live
+
+The landing page install button is store-aware. In
+`~/workspace/wheelgrade-deploy/index.html` there are `APP_STORE_URL` and
+`PLAY_STORE_URL` constants (both empty for now). Paste the Play store
+listing URL into `PLAY_STORE_URL` and push the landing repo — the button
+then becomes "Get it on Google Play" and routes straight to the store.
+Same for `APP_STORE_URL` when the iOS listing goes live.
+
+## The one thing that will likely block Play review: nothing special
+
+Unlike Apple, Google Play has no rule against an external payment link
+for a paid app — WheelGrade is a **paid app** ($9.99 upfront), not an
+in-app purchase, so there is no Stripe-vs-IAP conflict on Android. The
+web Stripe checkout is only used on the website, not inside the Android
+app. The Android app itself just loads the live site, which is the same
+content a browser shows.
+
+## Updating the app later
+
+- **Web changes** (Analyzer, Board, copy, grades): deploy the Worker as
+  usual. The Android app loads the live site — no rebuild, no
+  resubmission.
+- **Native changes** (icon, splash, package ID, Capacitor version):
+  edit here, run `./sync-web.sh` if the web snapshot changed, commit,
+  and re-run the workflow. A new AAB goes out; upload it to Play Console
+  as a new production release.
+- **Version bumps:** bump `versionName` in `android/app/build.gradle`
+  when Jon wants a new marketing version (e.g. `1.1`). `versionCode` is
+  automatic (run number).
+
+## Status
+
+- ✅ Capacitor Android platform added (Capacitor 8.6.2, SDK 36, JDK 21)
+- ✅ Launcher icons + splash generated from the Option B vector
+- ✅ GitHub Actions workflow written (not yet run — needs the 4 secrets)
+- ✅ Upload keystore generated (PKCS12, RSA 2048, valid to 2054)
+- ⏳ Needs Jon: 4 GitHub secrets, Play Console app creation + listing, $9.99 pricing, phone + Android-device verification
+- ⏳ Not started: first workflow run, first AAB upload, Play review
