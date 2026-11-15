@@ -98,8 +98,25 @@ jobs:
           ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
         run: |
-          xcrun altool --upload-app -f build/WheelGrade.ipa -t ios \
-            --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+          IPA=$(ls build/*.ipa 2>/dev/null | head -1)
+          if [ -z "$IPA" ] || [ ! -f "$IPA" ]; then
+            echo "ERROR: no IPA found in build/ - the export step did not produce one:"
+            ls -la build/ || true
+            exit 1
+          fi
+          echo "Uploading $IPA"
+          xcrun altool --upload-app -f "$IPA" -t ios \
+            --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID" 2>&1 | tee /tmp/altool-upload.log
+          if grep -q "ERROR:" /tmp/altool-upload.log; then
+            echo "altool reported an error - failing the step so it cannot pass silently:"
+            cat /tmp/altool-upload.log
+            exit 1
+          fi
+          if grep -qi "success" /tmp/altool-upload.log; then
+            echo "altool confirmed a successful upload."
+          else
+            echo "::warning::altool printed no explicit success line and no error - verify the build appears in TestFlight."
+          fi
 
       - name: Keep the IPA as an artifact
         if: always()
